@@ -54,7 +54,7 @@ void CNTR_PUTS(void){
 			
 		break;
 		
-		//©
+		//ï¿½ï¿½
 		case C_LEFT:
 			if(wolk_mode==0){
 				if(first==0){	
@@ -89,7 +89,7 @@ void CNTR_PUTS(void){
 			}
 		break;
 		
-		//¨
+		//ï¿½ï¿½
 		case C_RIGHT:
 			if(wolk_mode==0){
 				if(first==0){	
@@ -111,7 +111,7 @@ void CNTR_PUTS(void){
 			}
 		break;
 
-		//ª
+		//ï¿½ï¿½
 		case C_UP:
 			if(wolk_mode==0){
 				if(first==0){	
@@ -128,7 +128,7 @@ void CNTR_PUTS(void){
 				if(first==0){	
 					cnt_time=0;
 					first=1;
-					//‘«‚ğ‚»‚ë‚¦‚é
+					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë‚¦ï¿½ï¿½
 					leftleg(0,40,40,-5);
 					rightleg(0,40,-40,-5);
 				}
@@ -138,7 +138,7 @@ void CNTR_PUTS(void){
 			}
 		break;
 		
-		//«
+		//ï¿½ï¿½
 		case C_DOWN:
 			if(wolk_mode==0){
 				if(first==0){	
@@ -160,7 +160,7 @@ void CNTR_PUTS(void){
 			}
 		break;
 		
-		// 
+		//ï¿½ï¿½
 		case C_SQ:
 			if(first==0){
 				cnt_time=0;
@@ -171,7 +171,7 @@ void CNTR_PUTS(void){
 			}
 		break;
 		
-		//~
+		//ï¿½~
 		case C_PEC:
 			syaga=0;
 			if(first==0){
@@ -231,7 +231,7 @@ void CNTR_PUTS(void){
 			mode=1;
 		break;
 		
-		//Z
+		//ï¿½Z
 		case C_CR:
 			if(first==0){
 				cnt_time=0;
@@ -272,15 +272,19 @@ void CNTR_PUTS(void){
 			
 		break;
 		
-		//¢
+		//ï¿½ï¿½
 		case C_TR:
 			if(first==0){
 				cnt_time=0;
 				first=1;
 			}
 			if(demo_mode==0){
-				gurd_jaku();
-				gd=1;
+				if(wolk_mode==0){
+					gurd_jaku();
+					gd=1;
+				}else{
+					yosen50msoufront();
+				}
 			}
 		break;
 		
@@ -516,7 +520,7 @@ void CNTR_PUTS(void){
 		}
 		break;
 		
-		//‰EƒWƒ‡ƒCƒ“ƒg‰Ÿ‚µ‚İ
+		//ï¿½Eï¿½Wï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		case C_P_RIG:
 			if(wolk_mode==0 && first==0){
 				wolk_mode=1;
@@ -529,7 +533,7 @@ void CNTR_PUTS(void){
 			}
 		break;
 		
-		//¶ƒWƒ‡ƒCƒ“ƒg‰Ÿ‚µ‚İ
+		//ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		case C_P_LEF:
 			if(first==0){
 				/*if(analog==0){
@@ -556,13 +560,13 @@ void CNTR_PUTS(void){
 			touritu();
 		break;
 		
-		//ƒZƒŒƒNƒg
+		//ï¿½Zï¿½ï¿½ï¿½Nï¿½g
 		case C_SEL:
 			datu();
 			mode=0;
 		break;
 		
-		//ƒfƒtƒHƒ‹ƒg
+		//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½g
 		case C_DEF:
 			kosi(0);
 			if(first==0 && (mina_R==2||mina_L==2)){
