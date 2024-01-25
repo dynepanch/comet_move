@@ -1764,26 +1764,31 @@ void backdorop(void){
 	if(cnt_time>8000){
 		leftarm(0,-70,-90);
 		rightarm(0,-70,-90);
-		leftleg(5,40,40,-5);
-		rightleg(5,40,40,-5);
+		leftleg(5,90,40,-5);
+		rightleg(5,90,40,-5);
 	}else if(cnt_time>6000){
 		leftarm(0,-70,90);
 		rightarm(0,-70,90);
-		leftleg(5,40,40,-5);
-		rightleg(5,40,40,-5);
+		leftleg(15,90,40,-15);
+		rightleg(15,90,40,-15);
+	}else if(cnt_time>5000){
+		leftarm(-90,60,90);
+		rightarm(-90,60,90);
+		leftleg(15,90,40,-15);
+		rightleg(15,90,40,-15);
 	}else if(cnt_time>3000){
 		leftarm(-90,60,90);
 		rightarm(-90,60,90);
-		leftleg(5,90,40,-5);
-		rightleg(5,90,40,-5);
+		leftleg(5,40,40,-5);
+		rightleg(5,40,40,-5);
 	}else if(cnt_time>2000){
 		leftarm(-90,30,90);
 		rightarm(-90,30,90);
 		leftleg(5,90,-40,-5);
 		rightleg(5,90,-40,-5);
 	}else if(cnt_time>1000){
-		leftarm(0,30,90);
-		rightarm(0,30,90);
+		leftarm(0,0,90);
+		rightarm(0,0,90);
 		leftleg(5,80,-80,-25);
 		rightleg(5,80,-80,-25);
 	}else{
