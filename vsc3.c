@@ -668,7 +668,13 @@ void CNTR_PUTS(void){
 				touritu();
 			break;
 			
-
+			case C_START & C_DOWN:
+				if(first==0){
+					first=1;
+					cnt_time=0;
+				}
+				backdorop();
+			break;
 			
 			//�Z���N�g
 			case C_SEL:
@@ -794,11 +800,6 @@ void CNTR_PUTS(void){
 					first=0;
 					wolk=0;
 				}
-				
-				
-					
-				
-				
 				//
 				
 				//zero_all();
