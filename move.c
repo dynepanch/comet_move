@@ -244,42 +244,42 @@ void side_wolk_R(void){
 	if(cnt_time>5500){
 		cnt_time=0;
 	}else if(cnt_time>4500){
-		//¶‚ð‹“‚°‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		rightarm(10,40,0);
 		leftarm(10,60,0);
 		kosi(0);
 		rightleg(15,35,-50,-15);
 		leftleg(5,35,-50,-5);
 	}else if(cnt_time>3500){
-		//¶‚ð‹“‚°‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
 		rightleg(10,80,-80,0);
 		leftleg(-15,10,-40,10);
 	}else if(cnt_time>2500){
-		//‰E‘«‚ÉdS‚ð
+		//ï¿½Eï¿½ï¿½ï¿½Édï¿½Sï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
 		rightleg(10,30,-40,-10);
 		leftleg(-10,35,-50,10);
 	}else if(cnt_time>1500){
-		//‘«‚ð‚»‚ë‚¦‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë‚¦ï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
 		rightleg(0,35,-50,0);
 		leftleg(0,35,-50,0);
 	}else if(cnt_time>500){
-		//¶‘«‚ÉdS‚ð
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Édï¿½Sï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
 		rightleg(-10,10,-45,10);
 		leftleg(10,80,-80,0);
 	}else{
-		//¶‘«‚ÉdS‚ð
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Édï¿½Sï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
@@ -296,42 +296,42 @@ void side_wolk_L(void){
 	if(cnt_time>5500){
 		cnt_time=0;
 	}else if(cnt_time>4500){
-		//¶‚ð‹“‚°‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftarm(10,40,0);
 		rightarm(10,60,0);
 		kosi(0);
 		leftleg(15,35,-50,-15);
 		rightleg(5,35,-50,-5);
 	}else if(cnt_time>3500){
-		//¶‚ð‹“‚°‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
 		leftleg(10,80,-80,0);
 		rightleg(-15,10,-40,10);
 	}else if(cnt_time>2500){
-		//‰E‘«‚ÉdS‚ð
+		//ï¿½Eï¿½ï¿½ï¿½Édï¿½Sï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
 		leftleg(10,30,-40,-10);
 		rightleg(-10,35,-50,10);
 	}else if(cnt_time>1500){
-		//‘«‚ð‚»‚ë‚¦‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë‚¦ï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
 		leftleg(0,35,-50,0);
 		rightleg(0,35,-50,0);
 	}else if(cnt_time>500){
-		//¶‘«‚ÉdS‚ð
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Édï¿½Sï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
 		leftleg(-10,10,-45,10);
 		rightleg(10,80,-80,0);
 	}else{
-		//¶‘«‚ÉdS‚ð
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Édï¿½Sï¿½ï¿½
 		leftarm(10,60,0);
 		rightarm(10,60,0);
 		kosi(0);
@@ -686,8 +686,8 @@ void fuck_L(void){
 }
 
 void up_R(void){
-	leftarm_strech(127,127,60);
-	rightarm_strech(127,127,60);
+	leftarm_strech(127,127,127);
+	rightarm_strech(127,127,127);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
@@ -1187,47 +1187,47 @@ void front_work(void){
 	if(cnt_time>8000){
 		cnt_time=2500;
 	}else if(cnt_time>7000){
-		//¶‚ð‘O‚É	
+		//ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½	
 		leftleg(5,70,-10,-5);
 		rightleg(5,-10,-70,0);
 	}else if(cnt_time>6000){
-		//¶‚ð‹“‚°‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(10,80,-80,-10);
 		rightleg(-10,00,-30,10);
 	}else if(cnt_time>6000){
-		//‰E‚ÉdS‚ð
+		//ï¿½Eï¿½Édï¿½Sï¿½ï¿½
 		leftleg(5,-10,-70,-5);
 		rightleg(-5,40,-40,5);
 	}else if(cnt_time>5000){
-		//‰E‚ð‘O‚É
+		//ï¿½Eï¿½ï¿½Oï¿½ï¿½
 		leftleg(5,-10,-70,0);
 		rightleg(5,80,0,-5);
 	}else if(cnt_time>4500){
-		//‰E‚ð‹“‚°‚é
+		//ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(-10,00,-20,10);
 		rightleg(10,80,-80,0);
 	}else if(cnt_time>3500){
-		//¶‚ÉdS‚ð
+		//ï¿½ï¿½ï¿½Édï¿½Sï¿½ï¿½
 		leftleg(-10,30,-50,10);
 		rightleg(10,0,-80,-10);
 	}else if(cnt_time>3000){
-		//¶‚ÉdS‚ð
+		//ï¿½ï¿½ï¿½Édï¿½Sï¿½ï¿½
 		leftleg(-5,80,0,5);
 		rightleg(5,0,-80,-5);
 	}else if(cnt_time>2500){
-		//¶‚ð‘O‚É
+		//ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½
 		leftleg(5,80,0,0);
 		rightleg(5,0,-80,-5);
 	}else if(cnt_time>2000){
-		//¶‚ð‹“‚°‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(5,70,-70,-20);
 		rightleg(-5,40,-40,5);
 	}else if(cnt_time>1000){
-		//‰E‚ÉdS‚ðÚ‚¹‚é
+		//ï¿½Eï¿½Édï¿½Sï¿½ï¿½ï¿½Ú‚ï¿½ï¿½ï¿½
 		leftleg(10,40,-40,-10);
 		rightleg(-10,40,-40,10);
 	}else{
-		//‘«‚ð‚»‚ë‚¦‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë‚¦ï¿½ï¿½
 		leftleg(0,40,-40,-5);
 		rightleg(0,40,-40,-5);
 	}
@@ -1245,43 +1245,43 @@ void back_wolk(void){
 	if(cnt_time>10000){
 		cnt_time=3000;
 	}else if(cnt_time>9000){
-		//¶‚ðŒã‚ë‚É	
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	
 		leftleg(5,-10,-70,-5);
 		rightleg(5,80,0,0);
 	}else if(cnt_time>8000){
-		//¶‚ð‚ ‚°‚Ä
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(15,80,-80,-15);
 		rightleg(-15,20,-20,15);
 	}else if(cnt_time>7000){
-		//‰E‚ÉdS‚ð
+		//ï¿½Eï¿½Édï¿½Sï¿½ï¿½
 		leftleg(15,40,-40,-15);
 		rightleg(-15,45,-45,15);
 	}else if(cnt_time>6000){
-		//‰E‚ðŒã‚ë‚É
+		//ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(5,70,-10,0);
 		rightleg(5,-10,-70,-5);
 	}else if(cnt_time>5000){
-		//‰E‚ðŽ‚¿ã‚°
+		//ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã‚°
 		leftleg(-5,20,-20,5);
 		rightleg(5,80,-80,-5);
 	}else if(cnt_time>4000){
-		//¶‚ÉdS‚ð
+		//ï¿½ï¿½ï¿½Édï¿½Sï¿½ï¿½
 		leftleg(-15,45,-45,15);
 		rightleg(15,80,0,-15);
 	}else if(cnt_time>3000){
-		//¶‚ðŒã‚ë‚É
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(5,-10,-70,-5);
 		rightleg(5,80,0,0);
 	}else if(cnt_time>2000){
-		//¶‚ð‹“‚°‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(10,70,-70,-20);
 		rightleg(-15,20,-20,15);
 	}else if(cnt_time>1000){
-		//‰E‚ÉdS‚ðÚ‚¹‚é
+		//ï¿½Eï¿½Édï¿½Sï¿½ï¿½ï¿½Ú‚ï¿½ï¿½ï¿½
 		leftleg(5,40,-40,-5);
 		rightleg(-5,45,-45,5);
 	}else{
-		//‘«‚ð‚»‚ë‚¦‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë‚¦ï¿½ï¿½
 		leftleg(0,40,-40,-5);
 		rightleg(0,40,-40,-5);
 	}
@@ -1602,28 +1602,50 @@ void analog_wolk(void){
 	if(cnt_time>2650){
 		cnt_time=0;
 	}else if(cnt_time>2200){
-		//‰E‚ð‹“‚°‚é
+		//ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		rightleg(5,90,-90,-5);
 		leftleg(5-joint_L_X,30+joint_L_Y,-30+joint_L_Y,-joint_L_X);
 	}else if(cnt_time>1750){
-		//¶dS
+		//ï¿½ï¿½ï¿½dï¿½S
 		rightleg(5,35,-35,-5);
 		leftleg(5,45,-45,-5);
 	}else if(cnt_time>1350){
-		//‘µ‚¦‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(5+joint_L_X,35,-35,joint_L_X);
 		rightleg(5,35,-35,-10);
 	}else if(cnt_time>900){
-		//¶‚ð‹“‚°‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(5,90,-90,-5);
 		rightleg(5+joint_L_X,30+joint_L_Y,-30+joint_L_Y,-joint_L_X);
 	}else if(cnt_time>450){
-		//‰EdS
+		//ï¿½Eï¿½dï¿½S
 		leftleg(5,35,-35,-5);
 		rightleg(5,45,-45,0);
 	}else{
-		//‘µ‚¦‚é
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		leftleg(5,35,-35,-10);
 		rightleg(5,35,-35,0);
 	}
+}
+
+void yosen50msoufront(void){
+leftarm_strech(60,60,60);
+	rightarm_strech(60,60,60);
+	leftleg_strech(60,60,60,60);
+	rightleg_strech(60,60,60,60);
+	kosi_strech(60);
+	leftarm(0,60,40);
+	rightarm(0,60,40);
+	if(cnt_time>800){
+		cnt_time=0;
+	}else if(cnt_time>400){
+		rightleg(5,30,-40,-7);
+		leftleg(5,10,-40,-15);
+		kosi(0);
+	}else{
+		rightleg(5,10,-40,-15);
+		leftleg(5,30,-42,-7);
+		kosi(0);
+	}
+
 }
