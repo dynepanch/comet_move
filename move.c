@@ -1761,12 +1761,12 @@ void backdorop(void){
 	kosi_speed(127);
 	kosi(0);
 	
-	if(cnt_time>8000){
+	if(cnt_time>7000){
 		leftarm(0,-70,-90);
 		rightarm(0,-70,-90);
 		leftleg(5,90,40,-5);
 		rightleg(5,90,40,-5);
-	}else if(cnt_time>6000){
+	}else if(cnt_time>5500){
 		leftarm(0,-70,90);
 		rightarm(0,-70,90);
 		leftleg(15,90,40,-15);

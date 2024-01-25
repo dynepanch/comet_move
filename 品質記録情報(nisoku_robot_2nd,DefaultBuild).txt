@@ -1,5 +1,5 @@
 品質記録情報
-2024年1月25日 21:32:53
+2024年1月25日 21:35:13
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe move.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\move.obj -debug -g_line -nologo
@@ -69,8 +69,8 @@ DefaultBuild\nisoku_robot_2nd.clnk :
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: b334c99567af4d578d2dd47f6cfcf396a9a366f3
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 31e4d54865e103d7ed256663f6e7542181f48a44
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: b98aed8c271d451a267833ae3782cdcc95bc224f
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 00bc207ea2519070414183fca92d8e484ec0625d
 
 
 --- システム情報 ---
@@ -98,11 +98,11 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  145 MB
+  144 MB
  *GDIオブジェクト数
   1742
  *USERオブジェクト数
-  788
+  789
  *開いているファイル
   0 editors, 0 files, 0 KB
 
