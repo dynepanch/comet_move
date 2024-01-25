@@ -324,8 +324,12 @@ void CNTR_PUTS(void){
 					first=1;
 				}
 				if(demo_mode==0){
-					gurd_jaku();
-					gd=1;
+					if(wolk_mode==0){
+						gurd_jaku();
+						gd=1;
+					}else{
+						yosen50msoufront();
+					}
 				}
 			break;
 			//��
