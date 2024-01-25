@@ -577,16 +577,11 @@ void CNTR_PUTS(void){
 			
 			case C_START & C_RIGHT:
 				if(demo_mode==0){
-					if(cnt_time>3000){	
-						mina_R=1;
-					}else{
-						mina_R=0;
-					}
 					if(first==0){	
 						cnt_time=0;
 						first=1;
 					}
-					minakawa_R();
+					sidedorop_R();
 				}
 			break;
 			
@@ -673,7 +668,9 @@ void CNTR_PUTS(void){
 					first=1;
 					cnt_time=0;
 				}
-				backdorop();
+				if(demo_mode==0){
+					backdorop();
+				}
 			break;
 			
 			//�Z���N�g

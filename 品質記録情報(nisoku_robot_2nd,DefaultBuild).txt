@@ -1,13 +1,76 @@
 品質記録情報
-2024年1月25日 19:57:47
+2024年1月25日 21:01:29
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
------- ビルド終了(エラー:0個, 警告:0個)(nisoku_robot_2nd, DefaultBuild) ------
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe move.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\move.obj -debug -g_line -nologo
+move.c(121):W0520085:Invalid storage class for a parameter
+move.c(121):W0520085:Invalid storage class for a parameter
+move.c(121):W0520085:Invalid storage class for a parameter
+move.c(121):W0520085:Invalid storage class for a parameter
+move.c(129):W0520085:Invalid storage class for a parameter
+move.c(129):W0520085:Invalid storage class for a parameter
+move.c(129):W0520085:Invalid storage class for a parameter
+move.c(129):W0520085:Invalid storage class for a parameter
+move.c(137):W0520085:Invalid storage class for a parameter
+move.c(137):W0520085:Invalid storage class for a parameter
+move.c(137):W0520085:Invalid storage class for a parameter
+move.c(137):W0520085:Invalid storage class for a parameter
+move.c(170):W0520085:Invalid storage class for a parameter
+move.c(170):W0520085:Invalid storage class for a parameter
+move.c(170):W0520085:Invalid storage class for a parameter
+move.c(170):W0520085:Invalid storage class for a parameter
+move.c(177):W0520085:Invalid storage class for a parameter
+move.c(177):W0520085:Invalid storage class for a parameter
+move.c(177):W0520085:Invalid storage class for a parameter
+move.c(177):W0520085:Invalid storage class for a parameter
+move.c(184):W0520085:Invalid storage class for a parameter
+move.c(848):W0520177:Variable "kuri" was declared but never referenced
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\rlink.exe -subcommand=DefaultBuild\nisoku_robot_2nd.clnk
+W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
+W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
+Renesas Optimizing Linker Completed
+------ ビルド終了(エラー:0個, 警告:24個)(nisoku_robot_2nd, DefaultBuild) ------
+
+--- CommandFile 1 ---
+DefaultBuild\nisoku_robot_2nd.clnk :
+-library=DefaultBuild\nisoku_robot_2nd.lib
+-input=DefaultBuild\dbsct.obj
+-input=DefaultBuild\intprg.obj
+-input=DefaultBuild\nisoku_robot.obj
+-input=DefaultBuild\resetprg.obj
+-input=DefaultBuild\sbrk.obj
+-input=DefaultBuild\vecttbl.obj
+-input=DefaultBuild\define.obj
+-input=DefaultBuild\ontip.obj
+-input=DefaultBuild\cmt.obj
+-input=DefaultBuild\SPI.obj
+-input=DefaultBuild\SCI.obj
+-input=DefaultBuild\vsc3.obj
+-input=DefaultBuild\SCI6.obj
+-input=DefaultBuild\SCI9.obj
+-input=DefaultBuild\SCI12.obj
+-input=DefaultBuild\ics_servo.obj
+-input=DefaultBuild\move.obj
+-input=DefaultBuild\SCI5.obj
+-input=DefaultBuild\nomal_attac.obj
+-input=DefaultBuild\hissatu.obj
+-noprelink
+-output=DefaultBuild\nisoku_robot_2nd.abs
+-list=DefaultBuild\nisoku_robot_2nd.map
+-nooptimize
+-start=B_1,R_1,B_2,R_2,B,R,SU,SI/04,PResetPRG/0FFFC0000,C_1,C_2,C,C$DSEC,C$BSEC,C$INIT,C$VTBL,C$VECT,D_1,D_2,D,P,PIntPRG,W_1,W_2,W,L/0FFFC0100,FIXEDVECT/0FFFFFFD0
+-rom=D=R,D_1=R_1,D_2=R_2
+-nologo
+-end
+-input=DefaultBuild\nisoku_robot_2nd.abs
+-output=DefaultBuild\nisoku_robot_2nd.mot
+-form=stype
+-exit
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: d0d2acdf79a78d8319992bcf59a42ba8ff9e3bf0
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 5effc7b8299c1591e31749dc6d4610abfc63ae58
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 229fc4355fc92a24a26e2de3209b8954d1e39752
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: b9dd58501df60e069a73926486cf4f3f1255667d
 
 
 --- システム情報 ---
@@ -35,9 +98,9 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  138 MB
+  137 MB
  *GDIオブジェクト数
-  1696
+  1694
  *USERオブジェクト数
   784
  *開いているファイル
