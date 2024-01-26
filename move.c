@@ -1750,8 +1750,8 @@ void yosen50msoufront(void){
 }
 
 void backdorop(void){
-	rightarm_strech(60,80, 30);
-	leftarm_strech(60,80, 30);
+	rightarm_strech(60,80, 60);
+	leftarm_strech(60,80, 60);
 	rightleg_strech(60,60,60,60);
 	leftleg_strech(60,60,60,60);
 	rightarm_speed(127,127,127);
@@ -1761,14 +1761,19 @@ void backdorop(void){
 	kosi_speed(127);
 	kosi(0);
 	
-	if(cnt_time>7000){
-		leftarm(0,-70,-90);
-		rightarm(0,-70,-90);
+	if(cnt_time>6200){
+		leftarm(-60,-90,0);
+		rightarm(-60,-90,0);
+		leftleg(5,0,-90,-5);
+		rightleg(5,0,-90,-5);
+	}else if(cnt_time>5800){
+		leftarm(-60,-70,-70);
+		rightarm(-60,-70,-70);
 		leftleg(5,90,40,-5);
 		rightleg(5,90,40,-5);
-	}else if(cnt_time>5500){
-		leftarm(0,-70,90);
-		rightarm(0,-70,90);
+	}else if(cnt_time>5600){
+		leftarm(-60,-70,70);
+		rightarm(-60,-70,70);
 		leftleg(15,90,40,-15);
 		rightleg(15,90,40,-15);
 	}else if(cnt_time>5000){
@@ -1791,11 +1796,16 @@ void backdorop(void){
 		rightarm(0,0,90);
 		leftleg(5,80,-80,-25);
 		rightleg(5,80,-80,-25);
-	}else{
+	}else if(cnt_time>500){
 		leftarm(0,0,0);
 		rightarm(0,0,0);
 		leftleg(15,80,-80,-25);
-		rightleg(15,80,-80,-25);
+		rightleg(15,80,-80,-25);		
+	}else{
+		leftarm(0,60,0);
+		rightarm(0,60,0);
+		leftleg(15,40,-40,-25);
+		rightleg(15,40,-40,-25);
 			
 	}
 }

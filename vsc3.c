@@ -802,18 +802,6 @@ void CNTR_PUTS(void){
 				//zero_all();
 			break;
 			
-			default:
-				if(first==0){	
-					LEDOUT(led_mode);
-					leftarm_strech(30,60,60);
-					rightarm_strech(30,60,60);
-					leftarm(0,40,0);
-					rightarm(0,40,0);
-					leftleg(15,35,-50,-20);
-					rightleg(15,35,-50,-20);
-					kosi(0);
-				}	
-			break;
 			
 		}
 
