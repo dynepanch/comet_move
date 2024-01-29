@@ -252,7 +252,7 @@ void side_L(void){
 		leftleg(20,45,-45,-40);
 	}else{
 		rightleg(5,45,-45,-20);
-		leftleg(5,10,-10,-35);
+		leftleg(5,10,-10,0);
 		rightarm(-40,60,0);
 		leftarm(-40,60,0);
 		kosi(0);
@@ -284,7 +284,7 @@ void side_R(void){
 		rightleg(20,45,-45,-45);
 	}else{
 		leftleg(5,45,-45,-20);
-		rightleg(5,10,-10,-35);
+		rightleg(5,10,-10,0);
 		leftarm(-40,60,0);
 		rightarm(-40,60,0);
 		kosi(0);
