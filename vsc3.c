@@ -464,6 +464,17 @@ void CNTR_PUTS(void){
 				}
 			break;
 			
+			case C_R2 & C_DOWN:
+				if(first==0){
+					cnt_time=0;
+					first=1;
+					fuck=1;
+				}
+				if(demo_mode==0){
+					fuck_low_R();
+				}
+			break;
+			
 			//L2
 			case C_L2:
 				if(first==0){
@@ -473,6 +484,16 @@ void CNTR_PUTS(void){
 				}
 				if(demo_mode==0){
 					fuck_L();
+				}
+			break;
+			case C_L2 & C_DOWN:
+				if(first==0){
+					cnt_time=0;
+					first=1;
+					fuck=2;
+				}
+				if(demo_mode==0){
+					fuck_low_L();
 				}
 			break;
 			//L2+up
@@ -764,12 +785,12 @@ void CNTR_PUTS(void){
 						first=0;
 					}
 				}else if(fuck==1){
-					rightarm(0,60,90);
+					rightarm(0,0,0);
 					if(cnt_time>500){
 						fuck=0;
 					}
 				}else if(fuck==2){
-					leftarm(0,60,90);
+					leftarm(0,0,0);
 					if(cnt_time>500){
 						fuck=0;	
 					}
