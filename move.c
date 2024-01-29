@@ -516,13 +516,13 @@ void syagami(void){
 	static int i=0;
 	rightarm_speed(127,127,127);
 	leftarm_speed(127,127,127);
-	leftarm_strech(30,60,60);
-	rightarm_strech(30,60,60);
-	leftleg_strech(60,60,60,60);
-	rightleg_strech(60,60,60,60);
-	kosi_strech(60);
+	leftarm_strech(20,20,20);
+	rightarm_strech(20,20,20);
+	leftleg_strech(20,20,20,20);
+	rightleg_strech(20,20,20,20);
+	kosi_strech(20);
 	kosi(0);
-	if(cnt_time>1000){
+	if(cnt_time>2000){
 		i=1;
 	}else if(cnt_time>200){
 		leftleg(40,90,-90,-40);
@@ -1371,7 +1371,6 @@ void gurd(void){
 }
 //���ݍ���
 void side_up_R(void){
-	
 	rightarm_speed(127,127,127);
 	leftarm_speed(127,127,127);
 	leftarm_strech(60,60,60);
@@ -1380,72 +1379,83 @@ void side_up_R(void){
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
 	kosi(-40);
-	if(cnt_time>2500){
+	if(cnt_time>2700){
 		leftarm(-30,50,-20);
 		rightarm(0,-80,20);
 		leftleg(40,-40,-90,-45);
 		rightleg(40,90,40,-45);	
-	}else if(cnt_time>1500){
+	}else if(cnt_time>1700){
 		leftarm(-20,50,-20);
 		rightarm(10,40,20);
 		leftleg(40,-40,-90,-45);
 		rightleg(40,90,40,-45);
-	}else if(cnt_time>800){
+	}else if(cnt_time>1000){
 		leftarm(-20,50,-20);
 		rightarm(10,60,20);
 		leftleg(10,-30,-50,3);
 		rightleg(40,90,-0,-15);
-	}else if(cnt_time>400){
+	}else if(cnt_time>600){
 		leftarm(-20,50,-20);
 		rightarm(10,60,20);
 		leftleg(10,-30,-50,3);
 		rightleg(8,90,-0,-15);
-	
-	}else{
+	}else if(cnt_time>200){
 		leftarm(30,0,0);
 		rightarm(60,60,20);
 		leftleg(10,40,-50,-5);
 		rightleg(8,0,-0,-15);
+	}else{
+		leftarm(0,360,0);
+		rightarm(0,360,0);
+		leftleg(15,35,-50,-25);
+		rightleg(15,35,-50,-25);
 	}
 }
 
 void side_up_L(void){	
+	rightarm_speed(127,127,127);
+	leftarm_speed(127,127,127);
 	leftarm_strech(60,80,60);
 	rightarm_strech(60,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	if(cnt_time>2500){
+	if(cnt_time>2700){
 		rightarm(-30,50,-20);
 		leftarm(0,-80,20);
 		rightleg(40,-50,-90,-45);
 		leftleg(40,90,50,-45);
 		kosi(40);
-	}else if(cnt_time>1500){
+	}else if(cnt_time>1700){
 		rightarm(-30,50,-20);
 		leftarm(10,40,20);
 		rightleg(40,-50,-90,-45);
 		leftleg(40,90,50,-45);
 		kosi(40);
-	}else if(cnt_time>800){
+	}else if(cnt_time>1000){
 		rightarm(-30,50,-20);
 		leftarm(0,50,20);
 		rightleg(10,-30,-50,5);
 		leftleg(40,90,-0,-15);
 		kosi(40);
-	}else if(cnt_time>400){
+	}else if(cnt_time>600){
 		rightarm(-30,50,-20);
 		leftarm(30,60,20);
 		rightleg(10,-30,-50,5);
 		leftleg(8,90,-0,-15);
 		kosi(40);
-
-	}else{
+	}else if(cnt_time>200){
 		rightarm(30,0,0);
 		leftarm(60,60,20);
 		rightleg(10,40,-50,0);
 		leftleg(8,0,-0,-15);
 		kosi(40);
+	}else{
+		leftarm(0,360,0);
+		rightarm(0,360,0);
+		leftleg(15,35,-50,-25);
+		rightleg(15,35,-50,-25);
+		kosi(0);
 	}
 }
 
