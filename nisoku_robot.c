@@ -33,12 +33,22 @@ void main(void)
 		if(CONTLLOR()==C_START && mode==0){
 			while(cnt_time<500){	
 				mode=1;
+				LEDOUT(0x00);
 				rightarm(0,0,0);
 				leftarm(0,0,0);
 			}
 		}else if(mode==0){
 			cnt_time=0;
 		}else if(mode==1){
+			if(CONTLLOR()==C_P_LEF){
+				LEDOUT(0x02);
+				mode=2;
+			}
+			if(CONTLLOR()==C_P_RIG){
+				LEDOUT(0x01);
+				mode=2;
+			}
+		}else if(mode==2){
 			CNTR_PUTS();
 			mode=1;
 		}
