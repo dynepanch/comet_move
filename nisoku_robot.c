@@ -33,6 +33,8 @@ void main(void)
 		if(CONTLLOR()==C_START && mode==0){
 			while(cnt_time<500){	
 				mode=1;
+				leftarm_strech(0,60,60);
+				rightarm_strech(0,60,60);
 				LEDOUT(0x00);
 				rightarm(0,0,0);
 				leftarm(0,0,0);
@@ -40,6 +42,8 @@ void main(void)
 		}else if(mode==0){
 			cnt_time=0;
 		}else if(mode==1){
+			rightarm(360,360,360);
+			leftarm(360,360,360);
 			if(CONTLLOR()==C_P_LEF){
 				LEDOUT(0x02);
 				mode=2;
@@ -50,7 +54,7 @@ void main(void)
 			}
 		}else if(mode==2){
 			CNTR_PUTS();
-			mode=1;
+			mode=2;
 		}
 		
 		

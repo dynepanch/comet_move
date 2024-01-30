@@ -1,35 +1,13 @@
 品質記録情報
-2024年1月30日 21:26:31
+2024年1月30日 21:36:03
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe move.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\move.obj -debug -g_line -nologo
-move.c(121):W0520085:Invalid storage class for a parameter
-move.c(121):W0520085:Invalid storage class for a parameter
-move.c(121):W0520085:Invalid storage class for a parameter
-move.c(121):W0520085:Invalid storage class for a parameter
-move.c(129):W0520085:Invalid storage class for a parameter
-move.c(129):W0520085:Invalid storage class for a parameter
-move.c(129):W0520085:Invalid storage class for a parameter
-move.c(129):W0520085:Invalid storage class for a parameter
-move.c(137):W0520085:Invalid storage class for a parameter
-move.c(137):W0520085:Invalid storage class for a parameter
-move.c(137):W0520085:Invalid storage class for a parameter
-move.c(137):W0520085:Invalid storage class for a parameter
-move.c(170):W0520085:Invalid storage class for a parameter
-move.c(170):W0520085:Invalid storage class for a parameter
-move.c(170):W0520085:Invalid storage class for a parameter
-move.c(170):W0520085:Invalid storage class for a parameter
-move.c(177):W0520085:Invalid storage class for a parameter
-move.c(177):W0520085:Invalid storage class for a parameter
-move.c(177):W0520085:Invalid storage class for a parameter
-move.c(177):W0520085:Invalid storage class for a parameter
-move.c(184):W0520085:Invalid storage class for a parameter
-move.c(857):W0520177:Variable "kuri" was declared but never referenced
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe nisoku_robot.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\nisoku_robot.obj -debug -g_line -nologo
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\rlink.exe -subcommand=DefaultBuild\nisoku_robot_2nd.clnk
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 Renesas Optimizing Linker Completed
------- ビルド終了(エラー:0個, 警告:24個)(nisoku_robot_2nd, DefaultBuild) ------
+------ ビルド終了(エラー:0個, 警告:2個)(nisoku_robot_2nd, DefaultBuild) ------
 
 --- CommandFile 1 ---
 DefaultBuild\nisoku_robot_2nd.clnk :
@@ -69,8 +47,8 @@ DefaultBuild\nisoku_robot_2nd.clnk :
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 47be666893901afa57b1d84cf14e5d269b713e5e
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 64c1e7214d188766edba38f79e84d23643c38e52
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 00e36f6c1f5bdd83bf5ae76a3907b9c5025f745b
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 815f5ed54f5cf02c1c3dd8126ea63488b5fa79c9
 
 
 --- システム情報 ---
@@ -98,11 +76,11 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  135 MB
+  134 MB
  *GDIオブジェクト数
   1695
  *USERオブジェクト数
-  783
+  782
  *開いているファイル
   0 editors, 0 files, 0 KB
 
