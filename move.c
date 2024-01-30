@@ -694,18 +694,23 @@ void gurd_roll_L(void){
 }
 
 void roll_side_L(void){
-	leftarm(0,60,30);
-	rightarm(0,60,30);
-	if(cnt_time>2000){
-		cnt_time=0;	
-	}else if(cnt_time>1000){
-		kosi(20);
-		rightleg(5,10,-10,-5);
-		leftleg(5,10,-10,-10);
+	leftarm_strech(60,60,60);
+	rightarm_strech(60,60,60);
+	leftleg_strech(60,60,60,60);
+	rightleg_strech(60,60,60,60);
+	kosi_strech(60);
+	if(cnt_time>600){
+		cnt_time=0;
+	}else if(cnt_time>300){
+		rightleg(5,0,-20,-20);
+		leftleg(5,0,-20,10);
+		kosi(10);
 	}else{
+		rightleg(15,40,-40,10);
+		leftleg(15,40,-40,-30);
+		leftarm(0,40,0);
+		rightarm(0,40,0);
 		kosi(0);
-		rightleg(15,35,-50,0);
-		leftleg(15,50,-35,-25);
 	}
 }
 void roll_side_L_R(void){
@@ -731,20 +736,24 @@ void roll_side_R_L(void){
 }
 
 void roll_side_R(void){
-	leftarm(0,60,30);
-	rightarm(0,60,30);
+	leftarm_strech(60,60,60);
+	rightarm_strech(60,60,60);
+	leftleg_strech(60,60,60,60);
+	rightleg_strech(60,60,60,60);
+	kosi_strech(60);
 	if(cnt_time>600){
-		cnt_time=0;	
+		cnt_time=0;
 	}else if(cnt_time>300){
+		leftleg(5,0,-20,-20);
+		rightleg(5,0,-20,10);
 		kosi(-10);
-		leftleg(15,10,-10,0);
-		rightleg(5,20,-20,-10);
 	}else{
+		leftleg(15,40,-40,10);
+		rightleg(15,40,-40,-30);
+		leftarm(0,40,0);
+		rightarm(0,40,0);
 		kosi(0);
-		leftleg(5,35,-50,-20);
-		rightleg(15,35,-40,-15);
 	}
-
 }
 void front_work(void){
 	leftarm_strech(60,60,60);
@@ -1771,8 +1780,8 @@ void minakawa_L(void){
 	leftarm_strech(30,60,60);
 	rightarm_strech(30,60,60);
 	if(cnt_time>3000){
-		leftarm(0,40,0);
-		rightarm(0,40,0);
+		leftarm(20,40,0);
+		rightarm(20,40,0);
 		leftleg(80,0,0,0);
 		rightleg(90,0,0,10);
 		kosi(90);
@@ -1798,7 +1807,7 @@ void minakawa_L(void){
 		leftarm(0,60,90);
 		rightarm(0,60,90);
 		leftleg(15,0,-0,-30);
-		rightleg(5,40,-40,10);
+		rightleg(0,40,-40,10);
 		kosi(90);
 	}
 }
@@ -1806,8 +1815,8 @@ void minakawa_R(void){
 	leftarm_strech(30,60,60);
 	rightarm_strech(30,60,60);	
 	if(cnt_time>2500){
-		leftarm(0,40,0);
-		rightarm(0,40,0);
+		leftarm(20,40,0);
+		rightarm(20,40,0);
 		rightleg(80,0,0,0);
 		leftleg(90,0,0,10);
 		kosi(-90);
@@ -1833,7 +1842,7 @@ void minakawa_R(void){
 		leftarm(0,60,90);
 		rightarm(0,60,90);
 		rightleg(15,0,-0,-30);
-		leftleg(5,40,-40,5);
+		leftleg(0,40,-40,5);
 		kosi(-90);
 	}else{
 		leftarm(0,60,90);
