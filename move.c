@@ -1776,19 +1776,24 @@ void zenten(void){
 	}
 }
 
-void minakawa_L(void){
+void minakawa_L(void){	
+	rightarm_speed(127,127,127);
+	leftarm_speed(127,127,127);
 	leftarm_strech(30,60,60);
 	rightarm_strech(30,60,60);
+	leftleg_strech(30,60,60,60);
+	rightleg_strech(30,60,60,60);
+	kosi_strech(60);
 	if(cnt_time>3000){
 		leftarm(20,40,0);
 		rightarm(20,40,0);
-		leftleg(80,0,0,0);
+		leftleg(90,0,0,0);
 		rightleg(90,0,0,10);
 		kosi(90);
-	}else if(cnt_time>2000){
+	}else if(cnt_time>2500){
 		leftarm(0,40,0);
 		rightarm(0,40,0);
-		leftleg(40,90,-90,0);
+		leftleg(50,90,-90,0);
 		rightleg(90,0,0,10);
 		kosi(90);
 	}else if(cnt_time>1500){
@@ -1812,15 +1817,20 @@ void minakawa_L(void){
 	}
 }
 void minakawa_R(void){
+	rightarm_speed(127,127,127);
+	leftarm_speed(127,127,127);
 	leftarm_strech(30,60,60);
-	rightarm_strech(30,60,60);	
+	rightarm_strech(30,60,60);
+	leftleg_strech(30,60,60,60);
+	rightleg_strech(30,60,60,60);
+	kosi_strech(60);;	
 	if(cnt_time>2500){
-		leftarm(20,40,0);
-		rightarm(20,40,0);
-		rightleg(80,0,0,0);
+		leftarm(25,40,0);
+		rightarm(25,40,0);
+		rightleg(100,0,0,0);
 		leftleg(90,0,0,10);
 		kosi(-90);
-	}else if(cnt_time>2000){
+	}else if(cnt_time>1800){
 		leftarm(0,40,0);
 		rightarm(0,40,0);
 		rightleg(40,90,-90,0);

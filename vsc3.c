@@ -591,8 +591,8 @@ void CNTR_PUTS(void){
 				rightarm_strech(30,60,60);
 				leftarm(0,40,0);
 				rightarm(0,40,0);
-				leftleg(15,35,-50,-20);
-				rightleg(15,35,-50,-20);
+				leftleg(15,35,-50,-25);
+				rightleg(15,35,-50,-25);
 				kosi(0);
 			break;
 			
@@ -602,7 +602,12 @@ void CNTR_PUTS(void){
 						cnt_time=0;
 						first=1;
 					}
-					sidedorop_R();
+					if(cnt_time>3000){	
+						mina_R=1;
+					}else{
+						mina_R=0;
+					}
+					minakawa_R();
 				}
 			break;
 			
