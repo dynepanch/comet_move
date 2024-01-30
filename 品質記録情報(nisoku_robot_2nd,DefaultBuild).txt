@@ -1,5 +1,5 @@
 品質記録情報
-2024年1月29日 21:47:47
+2024年1月30日 16:04:08
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe move.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\move.obj -debug -g_line -nologo
@@ -24,7 +24,7 @@ move.c(177):W0520085:Invalid storage class for a parameter
 move.c(177):W0520085:Invalid storage class for a parameter
 move.c(177):W0520085:Invalid storage class for a parameter
 move.c(184):W0520085:Invalid storage class for a parameter
-move.c(860):W0520177:Variable "kuri" was declared but never referenced
+move.c(848):W0520177:Variable "kuri" was declared but never referenced
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\rlink.exe -subcommand=DefaultBuild\nisoku_robot_2nd.clnk
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
@@ -69,8 +69,8 @@ DefaultBuild\nisoku_robot_2nd.clnk :
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: de9e235feb9c33b9d80c5659aaa9b6a1724ef2a7
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 122711d70a49fac99eb28116b1c2e9b402daad37
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 43d4a09d6474488505ed26efb8c462b402e0b9a2
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: ba096193df4cca4ee8365261f40824c7c2e12676
 
 
 --- システム情報 ---
@@ -100,9 +100,9 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  *プライベート・ワーキング・セット
   133 MB
  *GDIオブジェクト数
-  1691
+  1695
  *USERオブジェクト数
-  784
+  783
  *開いているファイル
   0 editors, 0 files, 0 KB
 

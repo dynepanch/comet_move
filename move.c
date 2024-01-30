@@ -249,26 +249,14 @@ void side_L(void){
 		cnt_time=0;
 	}else if(cnt_time>300){
 		rightleg(20,10,-10,10);
-		leftleg(20,45,-45,-40);
+		leftleg(20,45,-45,-20);
 	}else{
 		rightleg(5,45,-45,-20);
-		leftleg(5,10,-10,0);
+		leftleg(5,10,-10,10);
 		rightarm(-40,60,0);
 		leftarm(-40,60,0);
 		kosi(0);
 	}
-	/*if(cnt_time>600){
-		cnt_time=0;
-	}else if(cnt_time>300){
-		rightleg(30,10,-10,10);
-		leftleg(5,45,-45,-30);
-	}else{
-		rightleg(3,45,-45,-20);
-		leftleg(10,10,-10,-30);
-		rightarm(-40,60,0);
-		leftarm(-40,60,0);
-		kosi(0);
-	}*/
 }
 
 void side_R(void){
@@ -281,10 +269,10 @@ void side_R(void){
 		cnt_time=0;
 	}else if(cnt_time>300){
 		leftleg(20,10,-10,10);
-		rightleg(20,45,-45,-45);
+		rightleg(20,45,-45,-20);
 	}else{
 		leftleg(5,45,-45,-20);
-		rightleg(5,10,-10,0);
+		rightleg(5,10,-10,10);
 		leftarm(-40,60,0);
 		rightarm(-40,60,0);
 		kosi(0);
@@ -708,9 +696,9 @@ void gurd_roll_L(void){
 void roll_side_L(void){
 	leftarm(0,60,30);
 	rightarm(0,60,30);
-	if(cnt_time>600){
+	if(cnt_time>2000){
 		cnt_time=0;	
-	}else if(cnt_time>300){
+	}else if(cnt_time>1000){
 		kosi(20);
 		rightleg(5,10,-10,-5);
 		leftleg(5,10,-10,-10);
