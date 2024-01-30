@@ -1,54 +1,13 @@
 品質記録情報
-2024年1月30日 21:36:03
+2024年1月30日 21:42:54
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe nisoku_robot.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\nisoku_robot.obj -debug -g_line -nologo
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\rlink.exe -subcommand=DefaultBuild\nisoku_robot_2nd.clnk
-W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
-W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
-Renesas Optimizing Linker Completed
------- ビルド終了(エラー:0個, 警告:2個)(nisoku_robot_2nd, DefaultBuild) ------
-
---- CommandFile 1 ---
-DefaultBuild\nisoku_robot_2nd.clnk :
--library=DefaultBuild\nisoku_robot_2nd.lib
--input=DefaultBuild\dbsct.obj
--input=DefaultBuild\intprg.obj
--input=DefaultBuild\nisoku_robot.obj
--input=DefaultBuild\resetprg.obj
--input=DefaultBuild\sbrk.obj
--input=DefaultBuild\vecttbl.obj
--input=DefaultBuild\define.obj
--input=DefaultBuild\ontip.obj
--input=DefaultBuild\cmt.obj
--input=DefaultBuild\SPI.obj
--input=DefaultBuild\SCI.obj
--input=DefaultBuild\vsc3.obj
--input=DefaultBuild\SCI6.obj
--input=DefaultBuild\SCI9.obj
--input=DefaultBuild\SCI12.obj
--input=DefaultBuild\ics_servo.obj
--input=DefaultBuild\move.obj
--input=DefaultBuild\SCI5.obj
--input=DefaultBuild\nomal_attac.obj
--input=DefaultBuild\hissatu.obj
--noprelink
--output=DefaultBuild\nisoku_robot_2nd.abs
--list=DefaultBuild\nisoku_robot_2nd.map
--nooptimize
--start=B_1,R_1,B_2,R_2,B,R,SU,SI/04,PResetPRG/0FFFC0000,C_1,C_2,C,C$DSEC,C$BSEC,C$INIT,C$VTBL,C$VECT,D_1,D_2,D,P,PIntPRG,W_1,W_2,W,L/0FFFC0100,FIXEDVECT/0FFFFFFD0
--rom=D=R,D_1=R_1,D_2=R_2
--nologo
--end
--input=DefaultBuild\nisoku_robot_2nd.abs
--output=DefaultBuild\nisoku_robot_2nd.mot
--form=stype
--exit
+------ ビルド終了(エラー:0個, 警告:0個)(nisoku_robot_2nd, DefaultBuild) ------
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 00e36f6c1f5bdd83bf5ae76a3907b9c5025f745b
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 815f5ed54f5cf02c1c3dd8126ea63488b5fa79c9
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 47ea3b72a7cdad3388b22d467aa35ac6666cb3a6
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 8f436bb3b57995ed94ef28b94a7fa34e3b003d88
 
 
 --- システム情報 ---
@@ -76,7 +35,7 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  134 MB
+  135 MB
  *GDIオブジェクト数
   1695
  *USERオブジェクト数
