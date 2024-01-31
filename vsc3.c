@@ -719,39 +719,43 @@ void CNTR_PUTS(void){
 				}
 				if((mina_R==1 || mina_L==1)){
 					if(mina_L==1){
-						if(cnt_time>2000){
-							leftarm(0,60,0);
-							rightarm(0,60,0);
-							rightleg(15,90,-90,-20);
-							leftleg(15,90,-90,-20);
-						}else if(cnt_time>1000){
-							leftarm(0,90,0);
-							rightarm(0,90,0);
-						}else{
-							kosi(90);
-							leftarm(0,90,0);
-							rightarm(0,90,0);
-							rightleg(90,90,-90,0);
-							leftleg(90,90,-90,0);
+						while(cnt_time<2500){	
+							if(cnt_time>2000){
+								leftarm(0,60,0);
+								rightarm(0,60,0);
+								rightleg(15,90,-90,-20);
+								leftleg(15,90,-90,-20);
+							}else if(cnt_time>1000){
+								leftarm(0,90,0);
+								rightarm(0,90,0);
+							}else{
+								kosi(90);
+								leftarm(0,90,0);
+								rightarm(0,90,0);
+								rightleg(90,90,-90,0);
+								leftleg(90,90,-90,0);
+							}
+							LEDOUT(0x03);
 						}
-						LEDOUT(0x03);
 					}else if(cnt_time>500 && mina_R==1){
-						if(cnt_time>2000){
-							leftarm(0,60,0);
-							rightarm(0,60,0);
-							rightleg(15,90,-90,-20);
-							leftleg(15,90,-90,-20);
-						}else if(cnt_time>1000){
-							leftarm(0,90,0);
-							rightarm(0,90,0);
-						}else{
-							kosi(-90);
-							leftarm(0,90,0);
-							rightarm(0,90,0);
-							rightleg(90,90,-90,0);
-							leftleg(90,90,-90,0);
+						while(cnt_time<2500){
+							if(cnt_time>2000){
+								leftarm(0,60,0);
+								rightarm(0,60,0);
+								rightleg(15,90,-90,-20);
+								leftleg(15,90,-90,-20);
+							}else if(cnt_time>1000){
+								leftarm(0,90,0);
+								rightarm(0,90,0);
+							}else{
+								kosi(-90);
+								leftarm(0,90,0);
+								rightarm(0,90,0);
+								rightleg(90,90,-90,0);
+								leftleg(90,90,-90,0);
+							}
+							LEDOUT(0x03);
 						}
-						LEDOUT(0x03);
 					}
 					while((CONTLLOR()==C_L2 & C_R2 & C_LEFT) || (CONTLLOR()==C_L2 & C_R2 & C_RIGHT)){}
 					if(cnt_time>2500){
