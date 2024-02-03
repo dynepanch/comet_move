@@ -146,7 +146,8 @@ void leftleg(static int mata,static int momo,static int hiza,static int kubi){
 		//servo_free_2(6,9);
 	}
 	if(momo<360){
-		momo*=-1;	
+		momo*=-1;
+		momo+=3;	
 		set_angle(8,momo);
 	}else{
 		servo_free(8);
@@ -220,8 +221,8 @@ void zero_all(void){
 void bace(void){
 	leftarm(0,360,0);
 	rightarm(0,360,0);
-	leftleg(15,35,-50,-25);
-	rightleg(15,35,-50,-25);
+	leftleg(15,35,-50,-30);
+	rightleg(15,35,-50,-30);
 	kosi(0);
 
 	leftarm_strech(0,60,60);
@@ -252,7 +253,7 @@ void side_L(void){
 		leftleg(20,45,-45,-20);
 	}else{
 		rightleg(5,45,-45,-20);
-		leftleg(5,10,-10,10);
+		leftleg(5,10,-10,0);
 		rightarm(-40,60,0);
 		leftarm(-40,60,0);
 		kosi(0);
@@ -272,7 +273,7 @@ void side_R(void){
 		rightleg(20,45,-45,-20);
 	}else{
 		leftleg(5,45,-45,-20);
-		rightleg(5,10,-10,10);
+		rightleg(5,10,-10,0);
 		leftarm(-40,60,0);
 		rightarm(-40,60,0);
 		kosi(0);
@@ -524,9 +525,9 @@ void syagami(void){
 	kosi(0);
 	if(cnt_time>2000){
 		i=1;
-	}else if(cnt_time>200){
-		leftleg(40,90,-90,-40);
-		rightleg(40,90,-90,-40);
+	}else if(cnt_time>300){
+		leftleg(60,90,-90,-60);
+		rightleg(60,90,-90,-60);
 		leftarm(-70,30,0);
 		rightarm(-70,30,0);
 	}else{
@@ -536,8 +537,8 @@ void syagami(void){
 		rightarm(-70,30,0);
 	}
 	if(i==1){
-		leftleg(40,360,360,-45);
-		rightleg(40,360,360,-45);
+		leftleg(60,360,360,-65);
+		rightleg(60,360,360,-65);
 		leftarm(-70,360,0);
 		rightarm(-70,360,0);
 	}
@@ -1655,7 +1656,7 @@ void humi_low_R(void){
 		leftarm(-30,60,-30);
 		rightarm(-80,0,30);
 		leftleg(15,-40,-50,-15);
-		rightleg(3,50,-40,0);
+		rightleg(3,50,-40,-3);
 		kosi(-60);
 	}else if(cnt_time>1400){
 		leftarm(-80,60,-30);
@@ -1841,13 +1842,13 @@ void minakawa_R(void){
 		leftarm(0,40,0);
 		rightarm(0,40,0);
 		rightleg(50,90,-90,0);
-		leftleg(70,0,0,5);
+		leftleg(70,0,0,0);
 		kosi(-90);
 	}else if(cnt_time>1700){
 		leftarm(0,40,90);
 		rightarm(0,40,90);
 		rightleg(30,90,-90,0);
-		leftleg(5,10,-10,0);
+		leftleg(5,10,-10,5);
 		kosi(-90);
 	}else if(cnt_time>1200){
 		leftarm(0,40,90);
@@ -1875,22 +1876,22 @@ void minakawa_R(void){
 	}
 }
 void yosen50msoufront(void){
-	leftarm_strech(60,60,60);
-	rightarm_strech(60,60,60);
+	leftarm_strech(0,60,60);
+	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	leftarm(0,60,20);
-	rightarm(0,60,20);
-	if(cnt_time>800){
+	leftarm(-40,60,10);
+	rightarm(-40,60,10);
+	if(cnt_time>1000){
 		cnt_time=0;
-	}else if(cnt_time>400){
-		rightleg(5,30,-40,-7);
-		leftleg(5,10,-40,-15);
+	}else if(cnt_time>500){
+		rightleg(5,70,-70,-7);
+		leftleg(5,50,-70,-15);
 		kosi(5);
 	}else{
-		rightleg(5,10,-40,-15);
-		leftleg(5,30,-42,-7);
+		rightleg(5,50,-70,-15);
+		leftleg(5,70,-70,-7);
 		kosi(-5);
 	}
 
