@@ -10,7 +10,7 @@ extern int dualshock;
 void CNTR_PUTS(void){
 	static int joint_L_X,joint_L_Y,joint_R_X,joint_R_Y,i=0,pn=0,mode=0,led_mode=1,da=0,demo_mode=0;
 	static float theata_L,theata_R,level_R,level_L;
-	static int first=0,syaga=0,analog=0,fuck=0,back_mode=0,punch_mode=0;
+	static int first=0,syaga=0,syagaowari=0,analog=0,fuck=0,back_mode=0,punch_mode=0;
 	static char *send_data[100];
 	static int wolk_mode=0,datu_mode=0,bace_mode=0,ent_mode=0,mina_R=0,mina_L=0,wk=0,AL_mode=0,wolk=0,gd=0;
 	PA_DATA();
@@ -214,6 +214,10 @@ void CNTR_PUTS(void){
 					leftarm(-90,60,0);
 					rightarm(-90,60,0);
 				}
+				if(cnt_time>300){
+					syagaowari=1;
+				}
+					
 			break;
 			//�~
 			case C_PEC & C_R1:
@@ -821,6 +825,17 @@ void CNTR_PUTS(void){
 					flont_osidasi();
 				}else if(joint_R_Y>=0xff && AL_mode==1){
 					back_osidasi();
+				}else if(syagaowari==1){
+					if(cnt_time>1000){
+						syagaowari=0;
+					}else{
+						leftleg_strech(60,60,60,60);
+						rightleg_strech(60,60,60,60);
+						leftleg(20,90,-90,-65);
+						rightleg(20,90,-90,-65);
+						leftarm(-60,40,0);
+						rightarm(-60,40,0);
+					}
 				}else{
 					LEDOUT(led_mode);
 					bace();

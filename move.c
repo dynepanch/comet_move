@@ -517,30 +517,30 @@ void syagami(void){
 	static int i=0;
 	rightarm_speed(127,127,127);
 	leftarm_speed(127,127,127);
-	leftarm_strech(20,20,20);
-	rightarm_strech(20,20,20);
-	leftleg_strech(20,20,20,20);
-	rightleg_strech(20,20,20,20);
+	leftarm_strech(10,20,20);
+	rightarm_strech(10,20,20);
+	leftleg_strech(100,20,20,60);
+	rightleg_strech(100,20,20,60);
 	kosi_strech(20);
 	kosi(0);
 	if(cnt_time>2000){
 		i=1;
 	}else if(cnt_time>300){
-		leftleg(60,90,-90,-60);
-		rightleg(60,90,-90,-60);
-		leftarm(-70,30,0);
-		rightarm(-70,30,0);
+		leftleg(60,90,-90,-70);
+		rightleg(60,90,-90,-70);
+		leftarm(-60,30,20);
+		rightarm(-60,30,20);
 	}else{
-		leftleg(40,0,-90,-40);
-		rightleg(40,0,-90,-40);
-		leftarm(-70,30,0);
-		rightarm(-70,30,0);
+		leftleg(40,35,-90,-40);
+		rightleg(40,35,-90,-40);
+		leftarm(-60,30,20);
+		rightarm(-60,30,20);
 	}
 	if(i==1){
-		leftleg(60,360,360,-65);
-		rightleg(60,360,360,-65);
-		leftarm(-70,360,0);
-		rightarm(-70,360,0);
+		leftleg(60,80,-90,-70);
+		rightleg(60,80,-90,-70);
+		leftarm(-60,360,20);
+		rightarm(-60,360,20);
 	}
 	if(CONTLLOR()!=C_PEC){
 			i=0;
@@ -1471,28 +1471,28 @@ void side_up_R(void){
 	kosi_strech(60);
 	kosi(-40);
 	if(cnt_time>2700){
-		leftarm(-30,50,-20);
-		rightarm(0,-80,20);
-		leftleg(40,-40,-90,-45);
-		rightleg(40,90,40,-45);	
+		leftarm(-30,50,-10);
+		rightarm(0,-80,10);
+		leftleg(40,-50,-90,-45);
+		rightleg(40,90,50,-45);	
 	}else if(cnt_time>1700){
-		leftarm(-20,50,-20);
-		rightarm(0,40,20);
-		leftleg(40,-40,-90,-45);
-		rightleg(40,90,40,-45);
+		leftarm(-20,50,-10);
+		rightarm(0,40,10);
+		leftleg(40,-50,-90,-45);
+		rightleg(40,90,50,-45);
 	}else if(cnt_time>1000){
-		leftarm(-20,50,-20);
-		rightarm(10,50,20);
+		leftarm(-20,50,-10);
+		rightarm(10,50,10);
 		leftleg(10,-30,-50,3);
 		rightleg(40,90,-0,-15);
 	}else if(cnt_time>600){
-		leftarm(-20,50,-20);
-		rightarm(10,50,20);
+		leftarm(-20,50,-10);
+		rightarm(10,50,10);
 		leftleg(10,-30,-50,3);
 		rightleg(8,90,-0,-15);
 	}else if(cnt_time>200){
 		leftarm(30,0,0);
-		rightarm(60,60,20);
+		rightarm(60,60,10);
 		leftleg(10,40,-50,-5);
 		rightleg(8,0,-0,-15);
 	}else{
@@ -1512,32 +1512,32 @@ void side_up_L(void){
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
 	if(cnt_time>2700){
-		rightarm(-30,50,-20);
-		leftarm(0,-80,20);
+		rightarm(-30,50,-10);
+		leftarm(0,-80,10);
 		rightleg(40,-50,-90,-45);
 		leftleg(40,90,50,-45);
 		kosi(40);
 	}else if(cnt_time>1700){
-		rightarm(-30,50,-20);
-		leftarm(0,40,20);
+		rightarm(-30,50,-10);
+		leftarm(0,40,10);
 		rightleg(40,-50,-90,-45);
 		leftleg(40,90,50,-45);
 		kosi(40);
 	}else if(cnt_time>1000){
-		rightarm(-30,50,-20);
-		leftarm(0,50,20);
+		rightarm(-30,50,-10);
+		leftarm(0,50,10);
 		rightleg(10,-30,-50,5);
 		leftleg(40,90,-0,-15);
 		kosi(40);
 	}else if(cnt_time>600){
-		rightarm(-30,50,-20);
-		leftarm(0,50,20);
+		rightarm(-30,50,-10);
+		leftarm(0,50,10);
 		rightleg(10,-30,-50,5);
 		leftleg(8,90,-0,-15);
 		kosi(40);
 	}else if(cnt_time>200){
 		rightarm(30,0,0);
-		leftarm(60,50,20);
+		leftarm(60,50,10);
 		rightleg(10,40,-50,0);
 		leftleg(8,0,-0,-15);
 		kosi(40);
@@ -1876,6 +1876,7 @@ void minakawa_R(void){
 	}
 }
 void yosen50msoufront(void){
+	static int i=0;
 	leftarm_strech(0,60,60);
 	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
@@ -1883,18 +1884,35 @@ void yosen50msoufront(void){
 	kosi_strech(60);
 	leftarm(-40,60,10);
 	rightarm(-40,60,10);
-	if(cnt_time>1000){
-		cnt_time=0;
-	}else if(cnt_time>500){
-		rightleg(5,70,-70,-7);
-		leftleg(5,50,-70,-15);
-		kosi(5);
+	if(i<10){
+		if(cnt_time>450){
+			cnt_time=0;
+			i++;
+		}else if(cnt_time>200){
+			rightleg(5,70,-70,-2);
+			leftleg(5,60,-70,-15);
+			kosi(15);
+		}else{
+			rightleg(5,60,-70,-15);
+			leftleg(5,70,-70,-2);
+			kosi(-15);
+		}
+	}else if(i<20){
+		if(cnt_time>500){
+			cnt_time=0;
+			i++;
+		}else if(cnt_time>250){
+			rightleg(5,60,-70,-15);
+			leftleg(5,70,-70,-2);
+			kosi(-15);
+		}else{
+			rightleg(5,70,-70,-2);
+			leftleg(5,60,-70,-15);
+			kosi(15);
+		}
 	}else{
-		rightleg(5,50,-70,-15);
-		leftleg(5,70,-70,-7);
-		kosi(-5);
+		i=0;
 	}
-
 }
 
 void backdorop(void){
