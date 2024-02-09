@@ -850,6 +850,8 @@ void CNTR_PUTS(void){
 			
 			
 		}
-
+		if(CONTLLOR()!=C_PEC && CONTLLOR()!=C_DEF){
+			syagaowari=0;
+		}
 	
 }

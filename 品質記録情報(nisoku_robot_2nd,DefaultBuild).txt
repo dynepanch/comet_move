@@ -1,5 +1,5 @@
 品質記録情報
-2024年2月4日 15:49:49
+2024年2月9日 20:30:36
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe move.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\move.obj -debug -g_line -nologo
@@ -24,7 +24,7 @@ move.c(178):W0520085:Invalid storage class for a parameter
 move.c(178):W0520085:Invalid storage class for a parameter
 move.c(178):W0520085:Invalid storage class for a parameter
 move.c(185):W0520085:Invalid storage class for a parameter
-move.c(858):W0520177:Variable "kuri" was declared but never referenced
+move.c(863):W0520177:Variable "kuri" was declared but never referenced
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\rlink.exe -subcommand=DefaultBuild\nisoku_robot_2nd.clnk
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
@@ -69,13 +69,13 @@ DefaultBuild\nisoku_robot_2nd.clnk :
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 25efe2b1a807ca9e5d131250451e7637da273827
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 1d8ea7cc922ee85c8e176d0050bdfaaf1e420367
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: d5afa4f722716a216707e1821d3e4aab56c08c33
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 2eb2337bf60b7411ee3150e296bc86f8816d489b
 
 
 --- システム情報 ---
 *OS バージョン
- Microsoft Windows 11 Home (-, 10.0.22621, WOW64)
+ Microsoft Windows 11 Home (-, 10.0.22631, WOW64)
 *言語
  日本語 (日本)
 *.NET Framework バージョン
@@ -98,11 +98,11 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  164 MB
+  163 MB
  *GDIオブジェクト数
-  1705
+  1706
  *USERオブジェクト数
-  884
+  880
  *開いているファイル
   0 editors, 0 files, 0 KB
 

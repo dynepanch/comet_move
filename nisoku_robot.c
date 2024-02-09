@@ -38,12 +38,16 @@ void main(void)
 				LEDOUT(0x00);
 				rightarm(0,0,0);
 				leftarm(0,0,0);
+				rightleg(0,0,0,0);
+				leftleg(0,0,0,0);
 			}
 		}else if(mode==0){
 			cnt_time=0;
 		}else if(mode==1){
 			rightarm(360,360,360);
 			leftarm(360,360,360);
+			rightleg(360,360,360,360);
+			leftleg(360,360,360,360);
 			if(CONTLLOR()==C_P_LEF){
 				LEDOUT(0x02);
 				mode=2;
