@@ -56,16 +56,8 @@ void CNTR_PUTS(void){
 			
 			//��
 			case C_LEFT:
-				if(wolk_mode==0){
-					if(first==0){	
-						cnt_time=0;
-						first=1;
-					}
-					while(CONTLLOR()==C_LEFT){
-						side_L();
-					}
-					
-				}else{
+				
+				if(wolk_mode==1){
 					if(first==0){	
 						cnt_time=0;
 						first=1;
@@ -80,20 +72,26 @@ void CNTR_PUTS(void){
 							AL_side_L();
 						}
 					}
+				}else if(wolk_mode==2){
+					if(first==0){	
+						cnt_time=0;
+						first=1;
+					}
+					yosen50msouside_L();
+				}else{
+					if(first==0){	
+						cnt_time=0;
+						first=1;
+					}
+					while(CONTLLOR()==C_LEFT){
+						side_L();
+					}
 				}
 			break;
 			
 			//��
 			case C_RIGHT:
-				if(wolk_mode==0){
-					if(first==0){	
-						cnt_time=0;
-						first=1;
-					}
-					while(CONTLLOR()==C_RIGHT){
-						side_R();
-					}
-				}else{
+				if(wolk_mode==1){
 					if(first==0){	
 						cnt_time=0;
 						first=1;
@@ -102,23 +100,26 @@ void CNTR_PUTS(void){
 						side_wolk_R();
 					}
 
+				}else if(wolk_mode==2){
+					if(first==0){	
+						cnt_time=0;
+						first=1;
+					}
+					yosen50msouside_R();					
+				}else{
+					if(first==0){	
+						cnt_time=0;
+						first=1;
+					}
+					while(CONTLLOR()==C_RIGHT){
+						side_R();
+					}
 				}
 			break;
 
 			//��
 			case C_UP:
-				if(wolk_mode==0){
-					if(first==0){	
-						cnt_time=0;
-						first=1;
-					}
-					while(CONTLLOR()==C_UP){
-						suri_front();
-						if(wolk==0){
-							wolk=1;
-						}
-					}
-				}else{
+				if(wolk_mode==1){
 					if(first==0){	
 						cnt_time=0;
 						first=1;
@@ -129,19 +130,36 @@ void CNTR_PUTS(void){
 					while(CONTLLOR()==C_UP){
 						front_work();
 					}
-				}
+				}if(wolk_mode==2){
+					if(first==0){	
+						cnt_time=0;
+						first=1;
+					}
+					yosen50msoufront(cnt_time);
+				}else{
+					if(first==0){	
+						cnt_time=0;
+						first=1;
+					}
+					while(CONTLLOR()==C_UP){
+						suri_front();
+						if(wolk==0){
+							wolk=1;
+						}
+					}
+				} 
+
 			break;
 			
 			//��
 			case C_DOWN:
-				if(wolk_mode==0){
+				if(wolk_mode==1){
 					if(first==0){	
 						cnt_time=0;
 						first=1;
 					}
 					while(CONTLLOR()==C_DOWN){
-						suri_back();
-						back_mode=1;
+						back_wolk();
 					}
 				}else{
 					if(first==0){	
@@ -149,7 +167,8 @@ void CNTR_PUTS(void){
 						first=1;
 					}
 					while(CONTLLOR()==C_DOWN){
-						back_wolk();
+						suri_back();
+						back_mode=1;
 					}
 				}
 			break;
@@ -328,11 +347,11 @@ void CNTR_PUTS(void){
 					first=1;
 				}
 				if(demo_mode==0){
-					if(wolk_mode==0){
+					if(wolk_mode==2){
+						yosen50msoufront();
+					}else{
 						gurd_jaku();
 						gd=1;
-					}else{
-						yosen50msoufront();
 					}
 				}
 			break;
@@ -464,7 +483,7 @@ void CNTR_PUTS(void){
 					fuck=1;
 				}
 				if(demo_mode==0){
-					fuck_R();
+					fuck_low_R();
 				}
 			break;
 			
@@ -475,7 +494,7 @@ void CNTR_PUTS(void){
 					fuck=1;
 				}
 				if(demo_mode==0){
-					fuck_low_R();
+					fuck_R();
 				}
 			break;
 			
@@ -487,7 +506,7 @@ void CNTR_PUTS(void){
 					fuck=2;
 				}
 				if(demo_mode==0){
-					fuck_L();
+					fuck_low_L();
 				}
 			break;
 			case C_L2 & C_DOWN:
@@ -497,7 +516,7 @@ void CNTR_PUTS(void){
 					fuck=2;
 				}
 				if(demo_mode==0){
-					fuck_low_L();
+					fuck_L();
 				}
 			break;
 			//L2+up
@@ -659,7 +678,11 @@ void CNTR_PUTS(void){
 					wolk_mode=1;
 					first=1;
 					LEDOUT(0x03);
-				}else if(first==0){
+				}else if(wolk_mode==1 && first==0){
+					wolk_mode=2;
+					first=1;
+					LEDOUT(0x03);
+				}else if(wolk_mode==2 && first==0){
 					wolk_mode=0;
 					first=1;
 					LEDOUT(0x00);

@@ -35,6 +35,9 @@ void main(void)
 				mode=1;
 				leftarm_strech(0,60,60);
 				rightarm_strech(0,60,60);
+				leftleg_strech(60,60,60,60);
+				rightleg_strech(60,60,60,60);
+				kosi_strech(60);
 				LEDOUT(0x00);
 				rightarm(0,0,0);
 				leftarm(0,0,0);
