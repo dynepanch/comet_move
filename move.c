@@ -7,7 +7,8 @@ extern int cnt_time;
 void leftarm(int kubi,int ude,int kata){
 	//kubi+=;
 	//ude+=;
-	
+	if(kubi>110 && kubi!=360)kubi=110;
+	if(kubi<-110 && kubi!=360)kubi=-110;
 	if(kata<360){
 		kata+=2;
 		set_angle(2,kata);
@@ -45,8 +46,9 @@ void leftarm_speed(int kubi,int ude,int kata){
 }
 
 void rightarm(int kubi,int ude,int kata){
-	//kubi=7500+kubi/270;
-	//ude=7500+ude/270;
+	if(kubi>110 && kubi!=360)kubi=110;
+	if(kubi<-110 && kubi!=360)kubi=-110;
+
 	if(kata<360){
 		kata*=-1;
 		kata-=4;
@@ -100,14 +102,14 @@ void rightleg(int mata,int momo,int hiza,int kubi){
 		//servo_free_2(5,12);
 	}
 	if(hiza<360){
-		hiza+=8;
+		hiza+=0;
 		set_angle(11,hiza);
 	}else{
 		servo_free(11);
 		//servo_free_2(5,11);
 	}
 	if(kubi<360){
-		kubi*=-1;
+		//kubi*=-1;
 		kubi+=2;
 		set_angle(10,kubi);
 	}else{
@@ -161,7 +163,8 @@ void leftleg(static int mata,static int momo,static int hiza,static int kubi){
 		//servo_free_2(6,7);
 	}
 	if(kubi<360){
-		kubi-=2;
+		kubi*=-1;
+		//kubi-=2;
 		set_angle(6,kubi);	
 	}else{
 		servo_free(6);
@@ -227,14 +230,14 @@ void bace(void){
 
 	leftarm_strech(0,60,60);
 	rightarm_strech(0,60,60);
-	leftleg_strech(80,60,60,60);
-	rightleg_strech(80,60,60,60);
+	leftleg_strech(80,60,60,30);
+	rightleg_strech(80,60,60,30);
 	kosi_strech(60);
 	
 	rightarm_speed(0,127,127);
 	leftarm_speed(0,127,127);
-	leftleg_speed(127,127,127,127);
-	rightleg_speed(127,127,127,127);
+	leftleg_speed(127,127,127,1);
+	rightleg_speed(127,127,127,1);
 	kosi_speed(127);
 	
 }
@@ -243,8 +246,8 @@ void bace(void){
 void side_L(void){
 	rightarm_speed(0,127,127);
 	leftarm_speed(0,127,127);
-	leftleg_speed(127,127,127,127);
-	rightleg_speed(127,127,127,127);
+	leftleg_speed(127,127,127,60);
+	rightleg_speed(127,127,127,60);
 	kosi_speed(127);
 	leftarm_strech(0,60,60);
 	rightarm_strech(0,60,60);
@@ -257,7 +260,7 @@ void side_L(void){
 		rightleg(20,10,-10,10);
 		leftleg(20,45,-45,-20);
 	}else{
-		rightleg(5,45,-45,-20);
+		rightleg(5,45,-45,-25);
 		leftleg(5,10,-10,0);
 		rightarm(-40,60,0);
 		leftarm(-40,60,0);
@@ -266,18 +269,23 @@ void side_L(void){
 }
 
 void side_R(void){
+	rightarm_speed(0,127,127);
+	leftarm_speed(0,127,127);
+	leftleg_speed(127,127,127,60);
+	rightleg_speed(127,127,127,60);
+	kosi_speed(127);
 	leftarm_strech(0,60,60);
 	rightarm_strech(0,60,60);
 	leftleg_strech(80,60,60,60);
 	rightleg_strech(80,60,60,60);
-	kosi_strech(60);
+	kosi_strech(60);	
 	if(cnt_time>600){
 		cnt_time=0;
 	}else if(cnt_time>300){
 		leftleg(20,10,-10,10);
 		rightleg(20,45,-45,-20);
 	}else{
-		leftleg(5,45,-45,-20);
+		leftleg(5,45,-45,-25);
 		rightleg(5,10,-10,0);
 		leftarm(-40,60,0);
 		rightarm(-40,60,0);
@@ -289,9 +297,12 @@ void side_wolk_R(void){
 	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
+	leftleg_speed(127,127,127,60);
+	rightleg_speed(127,127,127,60);
 	leftarm(-30,60,0);
 	rightarm(-30,60,0);
 	kosi_strech(60);
+	
 	if(cnt_time>2650){
 		cnt_time=0;
 	}else if(cnt_time>2200){
@@ -325,6 +336,8 @@ void side_wolk_L(void){
 	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
+	leftleg_speed(127,127,127,60);
+	rightleg_speed(127,127,127,60);
 	kosi_strech(60);
 	if(cnt_time>5500){
 		cnt_time=0;
@@ -378,6 +391,8 @@ void AL_side_L(void){
 	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
+	leftleg_speed(127,127,127,60);
+	rightleg_speed(127,127,127,60);
 	kosi_strech(60);
 	if(cnt_time>1000){
 		cnt_time=0;
@@ -398,6 +413,8 @@ void roll_R(void){
 	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
+	leftleg_speed(127,127,127,60);
+	rightleg_speed(127,127,127,60);
 	kosi_strech(100);
 	if(cnt_time>600){
 		cnt_time=0;
@@ -419,6 +436,8 @@ void syagami_roll_R(void){
 	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
+	leftleg_speed(127,127,127,60);
+	rightleg_speed(127,127,127,60);
 	kosi_strech(60);
 	if(cnt_time>600){
 		cnt_time=0;
@@ -440,6 +459,8 @@ void roll_L(void){
 	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
+	leftleg_speed(127,127,127,60);
+	rightleg_speed(127,127,127,60);
 	kosi_strech(100);
 	if(cnt_time>600){
 		cnt_time=0;
@@ -461,6 +482,8 @@ void syagami_roll_L(void){
 	rightarm_strech(60,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
+	leftleg_speed(127,127,127,60);
+	rightleg_speed(127,127,127,60);
 	kosi_strech(60);
 	if(cnt_time>600){
 		cnt_time=0;
@@ -481,6 +504,8 @@ void suri_front(void){
 	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
+	leftleg_speed(127,127,127,127);
+	rightleg_speed(127,127,127,127);
 	kosi_strech(60);
 	leftarm(-40,60,10);
 	rightarm(-40,60,10);
@@ -488,13 +513,13 @@ void suri_front(void){
 	if(cnt_time>600){
 		cnt_time=0;
 	}else if(cnt_time>300){
-		rightleg(5,40,-40,-0);
-		leftleg(5,0,-40,-15);
-		kosi(5);
+		rightleg(5,40,-40,-10);
+		leftleg(5,0,-40,-3);
+		kosi(10);
 	}else{
-		rightleg(5,0,-40,-15);
-		leftleg(5,40,-40,-0);
-		kosi(-5);
+		rightleg(5,0,-40,-3);
+		leftleg(5,40,-40,-10);
+		kosi(-10);
 	}
 }
 
@@ -503,19 +528,21 @@ void suri_back(void){
 	rightarm_strech(0,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
+	leftleg_speed(127,127,127,127);
+	rightleg_speed(127,127,127,127);
 	kosi_strech(60);
 	leftarm(0,50,0);
 	rightarm(0,50,0);
-	if(cnt_time>800){
+	if(cnt_time>600){
 		cnt_time=0;
-	}else if(cnt_time>400){
+	}else if(cnt_time>300){
 		rightleg(10,40,-40,-20);
-		leftleg(10,40,0,-8);
-		kosi(-5);
+		leftleg(10,40,0,-15);
+		kosi(-10);
 	}else{
-		rightleg(10,40,0,-8);
+		rightleg(10,40,0,-15);
 		leftleg(10,40,-40,-20);
-		kosi(5);
+		kosi(10);
 	}
 
 }
@@ -1165,8 +1192,8 @@ void up_R(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	rightleg(20,30,-55,-25);
-	leftleg(20,30,-55,-25);
+	rightleg(20,25,-55,-25);
+	leftleg(20,25,-55,-25);
 	if(cnt_time >2300){
 		rightarm(-80,360,0);
 		leftarm(0,60,0);
@@ -1273,8 +1300,8 @@ void up_L(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	rightleg(20,30,-55,-25);
-	leftleg(20,30,-55,-25);
+	rightleg(20,25,-55,-25);
+	leftleg(20,25,-55,-25);
 	if(cnt_time >2300){
 		leftarm(-80,360,0);
 		rightarm(0,60,0);
@@ -1411,8 +1438,8 @@ void up_flont(void){
 void gurd_jaku(void){
 	leftarm(10,40,-10);
 	rightarm(10,40,-10);
-	leftleg(30,10,-70,-45);
-	rightleg(30,10,-70,-45);
+	leftleg(30,20,-70,-45);
+	rightleg(30,20,-70,-45);
 	kosi(0);
 
 }
