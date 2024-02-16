@@ -1,5 +1,5 @@
 品質記録情報
-2024年2月14日 18:26:57
+2024年2月16日 16:46:49
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe move.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\move.obj -debug -g_line -nologo
@@ -24,7 +24,7 @@ move.c(181):W0520085:Invalid storage class for a parameter
 move.c(181):W0520085:Invalid storage class for a parameter
 move.c(181):W0520085:Invalid storage class for a parameter
 move.c(188):W0520085:Invalid storage class for a parameter
-move.c(892):W0520177:Variable "kuri" was declared but never referenced
+move.c(907):W0520177:Variable "kuri" was declared but never referenced
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\rlink.exe -subcommand=DefaultBuild\nisoku_robot_2nd.clnk
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
@@ -69,8 +69,8 @@ DefaultBuild\nisoku_robot_2nd.clnk :
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: fd16269767bb49deef83e1374c0d4e03f0b9f14c
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 9344476fbfb0dfd1ad8880c6f93f9ae97da4b28f
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: e6c69e5bd3ec7976e583d3d8b5d815ecbd1fa23c
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: e0ed85cd32bc4d7fe20015735f3072252272be3b
 
 
 --- システム情報 ---
@@ -98,11 +98,11 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  133 MB
+  131 MB
  *GDIオブジェクト数
-  1700
+  1694
  *USERオブジェクト数
-  790
+  783
  *開いているファイル
   0 editors, 0 files, 0 KB
 
