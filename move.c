@@ -59,6 +59,7 @@ void rightarm(int kubi,int ude,int kata){
 	}
 	if(ude<360){
 		//ude*=-1;
+		ude+=5;
 		set_angle(4,ude);
 	}else{
 		servo_free(4);
@@ -109,7 +110,7 @@ void rightleg(int mata,int momo,int hiza,int kubi){
 		//servo_free_2(5,11);
 	}
 	if(kubi<360){
-		//kubi*=-1;
+		kubi*=-1;
 		kubi+=2;
 		set_angle(10,kubi);
 	}else{
@@ -163,7 +164,7 @@ void leftleg(static int mata,static int momo,static int hiza,static int kubi){
 		//servo_free_2(6,7);
 	}
 	if(kubi<360){
-		kubi*=-1;
+		//kubi*=-1;
 		//kubi-=2;
 		set_angle(6,kubi);	
 	}else{
@@ -236,8 +237,8 @@ void bace(void){
 	
 	rightarm_speed(0,127,127);
 	leftarm_speed(0,127,127);
-	leftleg_speed(127,127,127,1);
-	rightleg_speed(127,127,127,1);
+	leftleg_speed(127,127,127,127);
+	rightleg_speed(127,127,127,127);
 	kosi_speed(127);
 	
 }
@@ -258,10 +259,10 @@ void side_L(void){
 		cnt_time=0;
 	}else if(cnt_time>300){
 		rightleg(20,10,-10,5);
-		leftleg(20,45,-45,-25);
+		leftleg(20,45,-45,-30);
 	}else{
-		rightleg(5,40,-40,-25);
-		leftleg(5,10,-10,-5);
+		rightleg(5,40,-40,-20);
+		leftleg(5,10,-10,0);
 		rightarm(-40,60,0);
 		leftarm(-40,60,0);
 		kosi(0);
@@ -283,10 +284,10 @@ void side_R(void){
 		cnt_time=0;
 	}else if(cnt_time>300){
 		leftleg(20,10,-10,-5);
-		rightleg(20,45,-45,-25);
+		rightleg(20,45,-45,-30);
 	}else{
-		leftleg(5,40,-40,-25);
-		rightleg(5,10,-10,-5);
+		leftleg(5,45,-45,-10);
+		rightleg(5,10,-10,0);
 		leftarm(-40,60,0);
 		rightarm(-40,60,0);
 		kosi(0);
@@ -423,8 +424,8 @@ void roll_R(void){
 		rightleg(0,0,-20,-20);
 		kosi(-30);
 	}else{
-		leftleg(15,40,-40,-20);
-		rightleg(15,40,-40,-20);
+		leftleg(15,30,-50,-20);
+		rightleg(15,30,-50,-20);
 		leftarm(0,60,0);
 		rightarm(0,60,0);
 		kosi(0);
@@ -469,8 +470,8 @@ void roll_L(void){
 		leftleg(5,0,-20,-20);
 		kosi(30);
 	}else{
-		rightleg(15,40,-40,-20);
-		leftleg(15,40,-40,-20);
+		rightleg(15,30,-50,-20);
+		leftleg(15,30,-50,-20);
 		leftarm(0,60,0);
 		rightarm(0,60,0);
 		kosi(0);
@@ -500,26 +501,23 @@ void syagami_roll_L(void){
 	}
 }
 void suri_front(void){
-	leftarm_strech(0,60,60);
-	rightarm_strech(0,60,60);
+	leftarm_strech(60,60,60);
+	rightarm_strech(60,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
-	leftleg_speed(127,127,127,127);
-	rightleg_speed(127,127,127,127);
 	kosi_strech(60);
-	leftarm(-40,60,-10);
-	rightarm(-40,60,-10);
-
+	leftarm(0,60,10);
+	rightarm(0,60,10);
 	if(cnt_time>600){
 		cnt_time=0;
 	}else if(cnt_time>300){
-		rightleg(10,40,-40,-15);
-		leftleg(10,0,-40,-5);
-		kosi(5);
+		rightleg(5,40,-40,-7);
+		leftleg(5,-10,-40,-15);
+		kosi(10);
 	}else{
-		rightleg(10,0,-40,-5);
-		leftleg(10,40,-40,-15);
-		kosi(-5);
+		rightleg(5,-10,-40,-15);
+		leftleg(5,42,-42,-7);
+		kosi(-10);
 	}
 }
 
@@ -1198,8 +1196,8 @@ void up_R(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	rightleg(20,25,-55,-25);
-	leftleg(20,25,-55,-25);
+	rightleg(20,30,-50,-25);
+	leftleg(20,30,-50,-25);
 	if(cnt_time >2300){
 		rightarm(-80,360,0);
 		leftarm(0,60,0);
@@ -1306,8 +1304,8 @@ void up_L(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	rightleg(20,25,-55,-25);
-	leftleg(20,25,-55,-25);
+	rightleg(20,30,-50,-25);
+	leftleg(20,30,-50,-25);
 	if(cnt_time >2300){
 		leftarm(-80,360,0);
 		rightarm(0,60,0);
@@ -1491,7 +1489,7 @@ void side_up_R(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	kosi(-40);
+	kosi(-50);
 	if(cnt_time>2700){
 		leftarm(-30,50,-10);
 		rightarm(-30,-80,10);
@@ -1536,15 +1534,15 @@ void side_up_L(void){
 	if(cnt_time>2700){
 		rightarm(-30,50,-10);
 		leftarm(0,-80,10);
-		rightleg(40,-50,-90,-45);
+		rightleg(40,-50,-90,-50);
 		leftleg(40,90,50,-45);
-		kosi(40);
+		kosi(50);
 	}else if(cnt_time>1700){
 		rightarm(-30,50,-10);
 		leftarm(0,40,10);
-		rightleg(40,-50,-90,-45);
+		rightleg(40,-50,-90,-50);
 		leftleg(40,90,50,-45);
-		kosi(40);
+		kosi(50);
 	}else if(cnt_time>1000){
 		rightarm(-30,50,-10);
 		leftarm(0,50,10);
