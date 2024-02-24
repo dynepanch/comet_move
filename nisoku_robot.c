@@ -3,7 +3,7 @@
 extern int cnt_time;
 extern int servo_angle_buff[20];
 extern int servo_strech_buff[20];
-
+extern int servo_speed_buff[20];
 void start(void){
 	ontip_timer();
 	INIT_SCI5();

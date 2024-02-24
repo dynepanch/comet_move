@@ -259,7 +259,7 @@ void side_L(void){
 		cnt_time=0;
 	}else if(cnt_time>300){
 		rightleg(20,10,-10,5);
-		leftleg(20,45,-45,-30);
+		leftleg(20,45,-45,-35);
 	}else{
 		rightleg(5,40,-40,-20);
 		leftleg(5,10,-10,0);
@@ -286,7 +286,7 @@ void side_R(void){
 		leftleg(20,10,-10,-5);
 		rightleg(20,45,-45,-30);
 	}else{
-		leftleg(5,45,-45,-10);
+		leftleg(5,45,-45,-15);
 		rightleg(5,10,-10,0);
 		leftarm(-40,60,0);
 		rightarm(-40,60,0);
@@ -420,8 +420,8 @@ void roll_R(void){
 	if(cnt_time>600){
 		cnt_time=0;
 	}else if(cnt_time>300){
-		leftleg(0,0,-20,-20);
-		rightleg(0,0,-20,-20);
+		leftleg(0,10,-20,-20);
+		rightleg(0,10,-20,-20);
 		kosi(-30);
 	}else{
 		leftleg(15,30,-50,-20);
@@ -466,8 +466,8 @@ void roll_L(void){
 	if(cnt_time>600){
 		cnt_time=0;
 	}else if(cnt_time>300){
-		rightleg(5,0,-20,-20);
-		leftleg(5,0,-20,-20);
+		rightleg(5,10,-20,-20);
+		leftleg(5,10,-20,-20);
 		kosi(30);
 	}else{
 		rightleg(15,30,-50,-20);
@@ -511,13 +511,13 @@ void suri_front(void){
 	if(cnt_time>600){
 		cnt_time=0;
 	}else if(cnt_time>300){
-		rightleg(5,40,-40,-7);
-		leftleg(5,-10,-40,-15);
-		kosi(10);
+		rightleg(5,40,-40,-4);
+		leftleg(5,-10,-40,-9);
+		kosi(5);
 	}else{
-		rightleg(5,-10,-40,-15);
-		leftleg(5,42,-42,-7);
-		kosi(-10);
+		rightleg(5,-10,-40,-9);
+		leftleg(5,42,-42,-4);
+		kosi(-5);
 	}
 }
 
@@ -622,7 +622,7 @@ void stand_side_L(void){
 	if(cnt_time>2300){
 		leftleg(15,80,-80,-40);
 		rightleg(15,80,-80,-40);
-	}else if(cnt_time>1300){
+	}else if(cnt_time>1500){
 		leftleg(60,80,-80,-60);
 		rightleg(60,80,-80,-60);
 		leftarm(0,60,-0);
@@ -655,7 +655,7 @@ void stand_side_R(void){
 	if(cnt_time>2300){
 		leftleg(15,80,-80,-40);
 		rightleg(15,80,-80,-40);
-	}else if(cnt_time>1300){
+	}else if(cnt_time>1500){
 		leftleg(60,80,-80,-60);
 		rightleg(60,80,-80,-60);
 		leftarm(0,60,0);
@@ -1196,8 +1196,8 @@ void up_R(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	rightleg(20,30,-50,-25);
-	leftleg(20,30,-50,-25);
+	rightleg(20,25,-55,-25);
+	leftleg(20,25,-55,-25);
 	if(cnt_time >2300){
 		rightarm(-80,360,0);
 		leftarm(0,60,0);
@@ -1304,8 +1304,8 @@ void up_L(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	rightleg(20,30,-50,-25);
-	leftleg(20,30,-50,-25);
+	rightleg(20,25,-55,-25);
+	leftleg(20,25,-55,-25);
 	if(cnt_time >2300){
 		leftarm(-80,360,0);
 		rightarm(0,60,0);
@@ -1400,43 +1400,31 @@ void punch_R(void){
 void up_flont(void){
 	rightarm_speed(127,127,127);
 	leftarm_speed(127,127,127);
-	leftarm_strech(60,60,60);
-	rightarm_strech(60,60,60);
+	leftarm_strech(60,60,30);
+	rightarm_strech(60,60,30);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	if(cnt_time>3300){
-		rightarm(0,50,0);
-		leftarm(0,50,0);
-		kosi(0);
-		leftleg(5,90,0,-5);
-		rightleg(5,0,-90,-3);
-	}else if(cnt_time>2300){
-		rightarm(-30,-70,95);
-		leftarm(-30,-70,95);
-		kosi(0);
-		leftleg(5,90,0,-5);
-		rightleg(5,0,-90,-3);
-	}else if(cnt_time>1800){
-		rightarm(90,-60,95);
-		leftarm(85,-60,95);
-		kosi(0);
-		leftleg(5,90,0,-5);
-		rightleg(5,0,-90,-3);
-	}else if(cnt_time>800){
-		rightarm(60,50,95);
-		leftarm(60,50,95);
-		kosi(0);
-		leftleg(5,90,0,-10);
-		rightleg(5,30,-50,-5);
-		
+	rightleg(20,40,-40,-25);
+	leftleg(20,40,-40,-25);
+	kosi(0);
+	if(cnt_time >2300){
+		leftarm(-80,360,0);
+		rightarm(-80,360,0);
+	}else if(cnt_time >1500){
+		leftarm(-80,-80,90);
+		rightarm(-80,-80,90);
+	}else if(cnt_time >1000){
+		leftarm(30,-70,90);
+		rightarm(30,-70,90);
+	}else if(cnt_time>500){
+		leftarm(110,-30,90);
+		rightarm(110,-30,90);	
 	}else{
-		rightarm(0,50,95);
-		leftarm(0,50,95);
-		kosi(0);
-		leftleg(5,40,-35,-10);
-		rightleg(5,40,-35,-5);
-	}
+		leftarm(30,30,90);
+		rightarm(30,30,90);
+	}	
+
 }
 //�K�[�h
 void gurd_jaku(void){
@@ -1675,8 +1663,8 @@ void humi_low_R(void){
 	if(cnt_time>2000){
 		leftarm(-30,60,-30);
 		rightarm(-80,0,30);
-		leftleg(15,-40,-50,-15);
-		rightleg(3,50,-40,-3);
+		leftleg(15,-40,-50,-20);
+		rightleg(3,50,-40,-0);
 		kosi(-60);
 	}else if(cnt_time>1400){
 		leftarm(-80,60,-30);
@@ -1723,7 +1711,7 @@ void humi_low_L(void){
 	if(cnt_time>2000){
 		rightarm(-30,60,-30);
 		leftarm(-80,0,30);
-		rightleg(15,-40,-50,-15);
+		rightleg(15,-40,-50,-20);
 		leftleg(3,50,-40,0);
 		kosi(60);
 	}else if(cnt_time>1400){
@@ -1773,29 +1761,79 @@ void zenten(void){
 		rightarm(360,360,360);
 		leftleg(10,0,0,0);
 		rightleg(10,0,0,0);
-	}else if(cnt_time>2300){
+	}else if(cnt_time>2500){
 		leftleg(0,0,0,0);
 		rightleg(0,0,0,0);
 		leftarm(-30,-70,80);
 		rightarm(-30,-70,80);
-	}else if(cnt_time>1700){
+	}else if(cnt_time>1900){
 		leftarm(0,-60,80);
 		rightarm(0,-60,80);
 		leftleg(0,90,-90,0);
 		rightleg(0,90,-90,0);
-	}else if(cnt_time>1300){
-		leftarm(70,60,80);
-		rightarm(70,60,80);
+	}else if(cnt_time>1500){
+		leftarm(0,50,80);
+		rightarm(0,50,80);
 		leftleg(0,90,-90,0);
 		rightleg(0,90,-90,0);
 	}else{
-		leftarm(70,60,80);
-		rightarm(70,60,80);
+		leftarm(60,60,80);
+		rightarm(60,60,80);
 		leftleg(0,-35,-90,-15);  
 		rightleg(0,-35,-90,-15);
 		kosi(0);
 	}
 }
+
+void sizers(void){
+	rightarm_speed(127,127,127);
+	leftarm_speed(127,127,127);
+	leftarm_strech(60,60,60);
+	rightarm_strech(60,60,60);
+	leftleg_strech(30,60,60,60);
+	rightleg_strech(30,60,60,60);
+	kosi_strech(60);
+	
+	if(cnt_time>6500){
+		leftleg(-3,90,-90,0);
+		rightleg(-3,90,-90,0);
+		leftarm(0,-60,-80);
+		rightarm(0,-60,-80);
+		kosi(-50);
+	}else if(cnt_time>4500){
+		leftleg(-3,90,-90,0);
+		rightleg(-3,90,-90,0);
+		leftarm(0,60,-80);
+		rightarm(0,60,-80);
+		kosi(-50);
+	}else if(cnt_time>2800){
+		leftleg(30,0,0,0);
+		rightleg(30,0,0,0);
+		leftarm(0,60,0);
+		rightarm(0,60,0);
+		kosi(0);
+	}else if(cnt_time>2000){
+		leftarm(0,-60,80);
+		rightarm(0,-60,80);
+		leftleg(30,90,-90,0);
+		rightleg(30,90,-90,0);
+		kosi(0);
+	}else if(cnt_time>1500){
+		leftarm(0,50,80);
+		rightarm(0,50,80);
+		leftleg(0,90,-90,0);
+		rightleg(0,90,-90,0);
+		kosi(0);
+	}else{	
+		leftarm(60,60,80);
+		rightarm(60,60,80);
+		leftleg(0,-35,-90,-15);  
+		rightleg(0,-35,-90,-15);
+		kosi(0);
+	}
+}
+
+
 
 void minakawa_L(void){	
 	rightarm_speed(127,127,127);
@@ -1902,8 +1940,40 @@ void yosen50msoufront(int i){
 	leftleg_strech(80,60,60,60);
 	rightleg_strech(80,60,60,60);
 	kosi_strech(60);
-	
-	if(i<900){
+	leftarm(-40,60,0);
+	rightarm(-40,60,0);
+		if(cnt_time>2600){
+			cnt_time=1000;
+		}else if(cnt_time>2200){
+			//右軸足
+			leftleg(0,60,-60,-0);
+			rightleg(0,15,-45,-0);
+			//kosi(5);
+		}else if(cnt_time>1800){
+			//右軸足
+			leftleg(0,15,-43,0);
+			rightleg(0,30,-30,0);
+			kosi(0);
+		}else if(cnt_time>1400){
+			//左軸足
+			leftleg(0,15,-40,-0);
+			rightleg(0,60,-60,-0);
+			//kosi(-5);
+		}else if(cnt_time>1000){
+			//左軸足
+			leftleg(0,30,-30,1);
+			rightleg(0,15,-43,-0);
+			kosi(0);
+		}else if(cnt_time>500){
+			leftleg(0,40,-40,-25);
+			rightleg(0,40,-40,-25);
+			kosi(0);
+		}else{
+			leftleg(0,30,-30,-25);
+			rightleg(0,40,-40,-25);
+			kosi(0);
+		}
+	/*if(i<900){
 		j=0;
 	}
 	if(j<5){
@@ -1975,7 +2045,7 @@ void yosen50msoufront(int i){
 			rightleg(0,40,-40,-25);
 			kosi(0);
 		}
-	}
+	}*/
 }
 
 void yosen50msouside_L(void){
@@ -1986,16 +2056,22 @@ void yosen50msouside_L(void){
 	kosi_strech(60);
 	leftarm(-40,60,10);
 	rightarm(-40,60,10);
-	if(cnt_time>800){
+		leftarm_strech(0,60,60);
+	rightarm_strech(0,60,60);
+	leftleg_strech(80,60,60,60);
+	rightleg_strech(80,60,60,60);
+	kosi_strech(60);
+	leftarm(-40,60,10);
+	rightarm(-40,60,10);
+	kosi(0);
+	if(cnt_time>2000){
 		cnt_time=0;
-	}else if(cnt_time>400){
-		rightleg(5,40,-40,-15);
-		leftleg(5,0,-40,-7);
-		kosi(-10);
+	}else if(cnt_time>1000){
+		rightleg(15,10,-10,0);
+		leftleg(15,45,-45,-30);
 	}else{
-		rightleg(15,0,-40,-7);
-		leftleg(15,42,-42,-15);
-		kosi(0);
+		rightleg(0,45,-45,-30);
+		leftleg(0,10,-10,-0);
 	}
 }
 
@@ -2007,7 +2083,18 @@ void yosen50msouside_R(void){
 	kosi_strech(60);
 	leftarm(-40,60,10);
 	rightarm(-40,60,10);
-	if(cnt_time>800){
+	kosi(0);
+	if(cnt_time>2000){
+		cnt_time=0;
+	}else if(cnt_time>1000){
+		leftleg(15,10,-10,0);
+		rightleg(15,45,-45,-30);
+	}else{
+		leftleg(0,45,-45,-30);
+		rightleg(0,10,-10,-0);
+	}
+
+	/*if(cnt_time>800){
 		cnt_time=0;
 	}else if(cnt_time>400){
 		leftleg(5,40,-40,-15);
@@ -2017,7 +2104,7 @@ void yosen50msouside_R(void){
 		leftleg(15,0,-40,-7);
 		rightleg(15,42,-42,-15);
 		kosi(0);
-	}
+	}*/
 }
 
 void backdorop(void){
@@ -2127,5 +2214,25 @@ void sidedorop_R(void){
 		leftleg(15,80,-80,-25);
 		rightleg(15,80,-80,-25);
 		kosi(0);	
+	}
+}
+void yosen50msoufront_2(void){
+	leftarm_strech(60,60,60);
+	rightarm_strech(60,60,60);
+	leftleg_strech(60,60,60,60);
+	rightleg_strech(60,60,60,60);
+	kosi_strech(60);
+	leftarm(0,60,10);
+	rightarm(0,60,10);
+	if(cnt_time>500){
+		cnt_time=0;
+	}else if(cnt_time>250){
+		rightleg(0,40,-40,-2);
+		leftleg(0,-10,-40,-5);
+		kosi(5);
+	}else{
+		rightleg(0,-10,-40,-5);
+		leftleg(0,42,-42,-2);
+		kosi(-5);
 	}
 }

@@ -5,7 +5,6 @@
 #include"math.h"
 
 extern int cnt_time;
-extern int dualshock;
 
 void CNTR_PUTS(void){
 	static int joint_L_X,joint_L_Y,joint_R_X,joint_R_Y,i=0,pn=0,mode=0,led_mode=1,da=0,demo_mode=0;
@@ -348,7 +347,7 @@ void CNTR_PUTS(void){
 				}
 				if(demo_mode==0){
 					if(wolk_mode==2){
-						yosen50msoufront();
+						yosen50msoufront_2();
 					}else{
 						gurd_jaku();
 						gd=1;
@@ -713,7 +712,7 @@ void CNTR_PUTS(void){
 					first=1;
 					cnt_time=0;
 				}
-				touritu();
+				sizers();
 			break;
 			
 			case C_START & C_DOWN:

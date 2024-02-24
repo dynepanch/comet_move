@@ -85,28 +85,28 @@ int set_speed(int sci_no,unsigned int id,unsigned int set_position){
 	static unsigned char trance_data[3];
 	switch (sci_no){
 		case 5:	//�E�r
-			trance_data[0] = (unsigned char)(put_stretch | (id));
+			trance_data[0] = (unsigned char)(0xC0 | (id));
 			trance_data[1] = (unsigned char)(0x02);
 			trance_data[2] = (unsigned char)(set_position);
 			//sci5_put(&trance_data[0],3);
 		break;
 		
 		case 6:	//���r
-			trance_data[0] = (unsigned char)(put_stretch | (id));
+			trance_data[0] = (unsigned char)(0xC0 | (id));
 			trance_data[1] = (unsigned char)(0x02);
 			trance_data[2] = (unsigned char)(set_position);
 			//sci6_put(&trance_data[0],3);
 		break;
 		
 		case 9:	//�E��
-			trance_data[0] = (unsigned char)(put_stretch | (id));
+			trance_data[0] = (unsigned char)(0xC0 | (id));
 			trance_data[1] = (unsigned char)(0x02);
 			trance_data[2] = (unsigned char)(set_position);
 			//sci9_put(&trance_data[0],3);
 		break;
 		
 		case 12://����
-			trance_data[0] = (unsigned char)(put_stretch | (id));
+			trance_data[0] = (unsigned char)(0xC0 | (id));
 			trance_data[1] = (unsigned char)(0x02);
 			trance_data[2] = (unsigned char)(set_position);
 			//sci12_put(&trance_data[0],3);

@@ -1,5 +1,5 @@
 品質記録情報
-2024年2月22日 16:15:18
+2024年2月24日 20:30:11
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe move.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\move.obj -debug -g_line -nologo
@@ -25,11 +25,12 @@ move.c(182):W0520085:Invalid storage class for a parameter
 move.c(182):W0520085:Invalid storage class for a parameter
 move.c(189):W0520085:Invalid storage class for a parameter
 move.c(905):W0520177:Variable "kuri" was declared but never referenced
+move.c(1937):W0520177:Variable "j" was declared but never referenced
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\rlink.exe -subcommand=DefaultBuild\nisoku_robot_2nd.clnk
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 Renesas Optimizing Linker Completed
------- ビルド終了(エラー:0個, 警告:24個)(nisoku_robot_2nd, DefaultBuild) ------
+------ ビルド終了(エラー:0個, 警告:25個)(nisoku_robot_2nd, DefaultBuild) ------
 
 --- CommandFile 1 ---
 DefaultBuild\nisoku_robot_2nd.clnk :
@@ -69,8 +70,8 @@ DefaultBuild\nisoku_robot_2nd.clnk :
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 5131532c7ba800f9023a2475ec44cf91e266e43a
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 7b3b0546e5db59064f6db6857c800b3e711c8b46
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 905baec1b200ba99204ed4cd5a461ca81db711c4
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: ebf99db7472107939dec8c1b5c569c7d27baf91b
 
 
 --- システム情報 ---
@@ -98,11 +99,11 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  153 MB
+  136 MB
  *GDIオブジェクト数
-  1705
+  1697
  *USERオブジェクト数
-  882
+  787
  *開いているファイル
   0 editors, 0 files, 0 KB
 
