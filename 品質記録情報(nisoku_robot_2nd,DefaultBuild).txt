@@ -1,5 +1,5 @@
 品質記録情報
-2024年2月24日 20:30:11
+2024年2月26日 21:31:59
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe move.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\move.obj -debug -g_line -nologo
@@ -25,7 +25,7 @@ move.c(182):W0520085:Invalid storage class for a parameter
 move.c(182):W0520085:Invalid storage class for a parameter
 move.c(189):W0520085:Invalid storage class for a parameter
 move.c(905):W0520177:Variable "kuri" was declared but never referenced
-move.c(1937):W0520177:Variable "j" was declared but never referenced
+move.c(1950):W0520177:Variable "j" was declared but never referenced
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\rlink.exe -subcommand=DefaultBuild\nisoku_robot_2nd.clnk
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
@@ -70,8 +70,8 @@ DefaultBuild\nisoku_robot_2nd.clnk :
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 905baec1b200ba99204ed4cd5a461ca81db711c4
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: ebf99db7472107939dec8c1b5c569c7d27baf91b
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 214539a1cae1f7afa91e67a8e3d6b4669b2d0a89
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: a30010668af62934d4c88a746486be53644adafa
 
 
 --- システム情報 ---
@@ -99,11 +99,11 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  136 MB
+  135 MB
  *GDIオブジェクト数
-  1697
+  1692
  *USERオブジェクト数
-  787
+  786
  *開いているファイル
   0 editors, 0 files, 0 KB
 
