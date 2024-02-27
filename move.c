@@ -547,6 +547,7 @@ void suri_back(void){
 
 void syagami(void){
 	static int i=0;
+	LTICA_2();
 	rightarm_speed(127,127,127);
 	leftarm_speed(127,127,127);
 	leftarm_strech(10,20,20);
