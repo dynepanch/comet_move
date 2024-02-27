@@ -43,7 +43,6 @@ void main(void)
 				leftleg_strech(0,0,0,0);
 				rightleg_strech(0,0,0,0);
 				kosi_strech(0);
-				LEDOUT(0x00);
 				rightarm(0,0,0);
 				leftarm(0,0,0);
 				rightleg(0,0,0,0);
@@ -53,6 +52,7 @@ void main(void)
 		}else if(mode==0){
 			cnt_time=0;
 		}else if(mode==1){
+			LTICA();
 			/*rightarm(360,360,360);
 			leftarm(360,360,360);
 			rightleg(360,360,360,360);

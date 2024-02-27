@@ -29,7 +29,7 @@ void CNTR_PUTS(void){
 				}
 				
 				if(CONTLLOR()==C_L2){
-					while(CONTLLOR()!=C_START){
+					while(CONTLLOR()!=C_START || CONTLLOR()!=C_SEL){
 						zero_all();
 					}
 				}
@@ -262,7 +262,7 @@ void CNTR_PUTS(void){
 			break;
 			
 			case C_PEC & C_UP:
-				LEDOUT(0x03);
+				LTICA_2();
 				if(first==0||syaga==0){
 					cnt_time=0;
 					first=1;
@@ -272,7 +272,7 @@ void CNTR_PUTS(void){
 				stand_flont();
 			break;
 			case C_PEC & C_DOWN:
-				LEDOUT(0x03);
+				LTICA_2();
 				if(first==0||syaga==0){
 					cnt_time=0;
 					first=1;
@@ -564,9 +564,6 @@ void CNTR_PUTS(void){
 					wolk=2;
 				}
 			break;
-				
-			
-			
 			
 			case C_L2 & C_R2:
 				if(first==0){
@@ -702,8 +699,13 @@ void CNTR_PUTS(void){
 						demo_mode=1;
 					}*/
 					first=1;
+					cnt_time=0;
 				}
-				LEDOUT(0x03);
+				if(cnt_time>2000){
+					zero_all();
+					analog=0;
+					LTICA();
+				}
 				//hand_huri();
 			break;
 			

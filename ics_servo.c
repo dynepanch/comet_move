@@ -233,5 +233,5 @@ void wari_1(void){
 	i++;
 	
 	cnt_time++;
-	
+	ltica_timer++;
 }

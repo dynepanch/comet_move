@@ -89,7 +89,7 @@ void rightarm_speed(int kubi,int ude,int kata){
 void rightleg(int mata,int momo,int hiza,int kubi){
 	
 	if(mata<360){
-		mata-=3;
+		mata-=4;
 		set_angle(13,mata);
 	}else{
 		servo_free(13);
@@ -142,7 +142,7 @@ void leftleg(static int mata,static int momo,static int hiza,static int kubi){
 	//hiza=7500+hiza/270;
 	if(mata<360){
 		mata*=-1;
-		mata+=3;
+		mata+=4;
 		set_angle(9,mata);
 	}else{
 		servo_free(9);
@@ -513,11 +513,11 @@ void suri_front(void){
 	}else if(cnt_time>300){
 		rightleg(5,40,-40,-4);
 		leftleg(5,-10,-40,-9);
-		kosi(10);
+		kosi(5);
 	}else{
 		rightleg(5,-10,-40,-9);
 		leftleg(5,42,-42,-4);
-		kosi(-10);
+		kosi(-5);
 	}
 }
 
@@ -1566,42 +1566,42 @@ void side_up_L(void){
 
 
 void humi_R(void){
-	rightarm_speed(127,127,127);
+rightarm_speed(127,127,127);
 	leftarm_speed(127,127,127);
 	leftarm_strech(60,60,60);
 	rightarm_strech(60,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	if(cnt_time>2000){
+	if(cnt_time>1700){
 		leftarm(-30,60,-30);
 		rightarm(-80,-60,30);
-		leftleg(15,-40,-50,-15);
-		rightleg(3,50,-40,0);
-		kosi(-60);
+		leftleg(3,-40,-50,0);
+		rightleg(3,70,-20,-3);
+		kosi(-80);
 	}else if(cnt_time>1400){
 		leftarm(-80,60,-30);
-		rightarm(120,-60,30);
-		leftleg(15,-40,-40,-15);
-		rightleg(3,50,-30,0);
+		rightarm(100,0,30);
+		leftleg(3,-40,-40,0);
+		rightleg(3,70,-20,-3);
 		kosi(-60);
 	}else if(cnt_time>1000){
 		leftarm(-30,60,-50);
-		rightarm(100,-30,50);
-		leftleg(15,-30,-50,3);
+		rightarm(100,30,50);
+		leftleg(3,-30,-50,-3);
 		rightleg(3,90,-0,-15);
 		kosi(-40);
 	}else if(cnt_time>600){
 		leftarm(-30,60,-50);
-		rightarm(100,-30,50);
+		rightarm(100,30,50);
 		leftleg(10,-30,-50,3);
 		rightleg(8,90,-0,-15);
 		kosi(-40);
 	}else if(cnt_time>200){
 		leftarm(-30,30,0);
-		rightarm(100,-30,50);
+		rightarm(100,30,50);
 		leftleg(10,40,-50,-5);
-		rightleg(8,0,-0,-15);
+		rightleg(0,0,-0,-15);
 		kosi(-40);
 	}else{
 		leftarm(0,60,0);
@@ -1609,40 +1609,39 @@ void humi_R(void){
 		leftleg(15,35,-50,-25);
 		rightleg(15,35,-50,-25);
 		kosi(0);
-	}
-	
+	}	
 }
 void humi_L(void){
-	rightarm_speed(127,127,127);
+		rightarm_speed(127,127,127);
 	leftarm_speed(127,127,127);
 	leftarm_strech(60,60,60);
 	rightarm_strech(60,60,60);
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	if(cnt_time>2000){
+	if(cnt_time>1800){
 		rightarm(-30,60,-30);
 		leftarm(-80,-60,30);
-		rightleg(15,-40,-50,-15);
-		leftleg(3,50,-40,0);
-		kosi(60);
+		rightleg(3,-40,-50,-0);
+		leftleg(3,70,-20,-5);
+		kosi(80);
 	}else if(cnt_time>1400){
 		rightarm(-30,60,-30);
-		leftarm(120,-60,30);
-		rightleg(15,-40,-40,-15);
-		leftleg(3,50,-40,0);
+		leftarm(100,0,30);
+		rightleg(3,-40,-40,-15);
+		leftleg(3,70,-20,0);
 		kosi(60);
 	}else if(cnt_time>1000){
 		rightarm(-30,30,-50);
-		leftarm(100,-30,50);
-		rightleg(15,-30,-50,3);
+		leftarm(100,30,50);
+		rightleg(3,-30,-50,3);
 		leftleg(3,90,-0,-15);
 		kosi(40);
 	}else if(cnt_time>600){
 		rightarm(-30,30,-50);
-		leftarm(100,-30,50);
+		leftarm(100,30,50);
 		rightleg(10,-30,-50,5);
-		leftleg(8,90,-0,-15);
+		leftleg(0,90,-0,-15);
 		kosi(40);
 	}else if(cnt_time>200){
 		rightarm(-30,40,0);
@@ -1666,22 +1665,22 @@ void humi_low_R(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	if(cnt_time>1900){
+	if(cnt_time>1700){
 		leftarm(-30,60,-30);
 		rightarm(-80,-10,30);
-		leftleg(15,-40,-50,-20);
-		rightleg(3,50,-40,-0);
-		kosi(-60);
+		leftleg(3,-40,-50,0);
+		rightleg(3,70,-20,-3);
+		kosi(-80);
 	}else if(cnt_time>1400){
 		leftarm(-80,60,-30);
 		rightarm(100,40,30);
-		leftleg(15,-40,-40,-15);
-		rightleg(3,50,-30,0);
+		leftleg(3,-40,-40,0);
+		rightleg(3,70,-20,-3);
 		kosi(-60);
 	}else if(cnt_time>1000){
 		leftarm(-30,60,-50);
 		rightarm(100,30,50);
-		leftleg(15,-30,-50,3);
+		leftleg(3,-30,-50,-3);
 		rightleg(3,90,-0,-15);
 		kosi(-40);
 	}else if(cnt_time>600){
@@ -1694,7 +1693,7 @@ void humi_low_R(void){
 		leftarm(-30,30,0);
 		rightarm(100,30,50);
 		leftleg(10,40,-50,-5);
-		rightleg(8,0,-0,-15);
+		rightleg(0,0,-0,-15);
 		kosi(-40);
 	}else{
 		leftarm(0,60,0);
@@ -1714,29 +1713,29 @@ void humi_low_L(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	if(cnt_time>2000){
+	if(cnt_time>1800){
 		rightarm(-30,60,-30);
 		leftarm(-80,0,30);
-		rightleg(15,-40,-50,-20);
-		leftleg(3,50,-40,0);
-		kosi(60);
+		rightleg(3,-40,-50,-0);
+		leftleg(3,70,-20,-5);
+		kosi(80);
 	}else if(cnt_time>1400){
 		rightarm(-30,60,-30);
 		leftarm(120,0,30);
-		rightleg(15,-40,-40,-15);
-		leftleg(3,50,-40,0);
+		rightleg(3,-40,-40,-15);
+		leftleg(3,70,-20,0);
 		kosi(60);
 	}else if(cnt_time>1000){
 		rightarm(-30,30,-50);
 		leftarm(100,30,50);
-		rightleg(15,-30,-50,3);
+		rightleg(3,-30,-50,3);
 		leftleg(3,90,-0,-15);
 		kosi(40);
 	}else if(cnt_time>600){
 		rightarm(-30,30,-50);
 		leftarm(100,30,50);
 		rightleg(10,-30,-50,5);
-		leftleg(8,90,-0,-15);
+		leftleg(0,90,-0,-15);
 		kosi(40);
 	}else if(cnt_time>200){
 		rightarm(-30,40,0);
@@ -1865,30 +1864,30 @@ void minakawa_L(void){
 	}else if(cnt_time>2200){
 		leftarm(0,40,0);
 		rightarm(0,40,0);
-		leftleg(30,90,-90,0);
-		rightleg(50,0,0,-5);
+		leftleg(50,90,-90,0);
+		rightleg(50,0,0,5);
 		kosi(90);
 	}else if(cnt_time>1700){
 		leftarm(0,40,90);
 		rightarm(0,40,90);
 		leftleg(30,90,-90,0);
-		rightleg(5,10,-10,10);
+		rightleg(5,40,-40,10);
 		kosi(90);
 	}else if(cnt_time>1200){
 		leftarm(0,40,90);
 		rightarm(0,40,90);
 		leftleg(5,90,-90,-30);
-		rightleg(5,10,-10,10);
+		rightleg(0,40,-40,10);
 		kosi(90);
 	}else if(cnt_time>200){
-		leftarm(0,60,90);
-		rightarm(0,60,90);
+		leftarm(0,50,90);
+		rightarm(0,50,90);
 		leftleg(15,0,-0,-30);
 		rightleg(0,40,-40,10);
 		kosi(90);
 	}else{
-		leftarm(0,60,0);
-		rightarm(0,60,0);
+		leftarm(0,50,0);
+		rightarm(0,50,0);
 		leftleg(15,35,-50,-15);
 		rightleg(15,35,-50,-15);
 		kosi(0);

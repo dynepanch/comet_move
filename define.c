@@ -3,6 +3,7 @@
 
 extern int servo_angle_buff[20];
 extern int cnt_time;
+extern int ltica_timer;
 
 void start_up(void){
 
@@ -36,13 +37,40 @@ void LEDOUT(int i){
 }
 
 void LTICA(void){
+	static int i=0;
 	
-	LEDOUT(0x01);
-	wait(1000);
-	LEDOUT(0x02);
-	wait(1000);
+	if(i==0){
+		ltica_timer=0;
+		i=1;
+	}
+
+	if(ltica_timer>2000){
+		i=0;
+	}else if(ltica_timer>1000){
+		LEDOUT(0x01);
+	}else {
+		LEDOUT(0x02);
+	}
+	
 }
 
+void LTICA_2(void){
+	static int i=0;
+	
+	if(i==0){
+		ltica_timer=0;
+		i=1;
+	}
+
+	if(ltica_timer>2000){
+		i=0;
+	}else if(ltica_timer>1000){
+		LEDOUT(0x03);
+	}else {
+		LEDOUT(0x00);
+	}
+	
+}
 
 
 void CNT_TIME(void){

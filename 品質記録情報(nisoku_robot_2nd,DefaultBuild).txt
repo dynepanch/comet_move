@@ -1,36 +1,29 @@
 品質記録情報
-2024年2月26日 21:31:59
+2024年2月27日 18:36:50
 
 ------ ビルド開始(nisoku_robot_2nd, DefaultBuild) ------
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe move.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\move.obj -debug -g_line -nologo
-move.c(124):W0520085:Invalid storage class for a parameter
-move.c(124):W0520085:Invalid storage class for a parameter
-move.c(124):W0520085:Invalid storage class for a parameter
-move.c(124):W0520085:Invalid storage class for a parameter
-move.c(132):W0520085:Invalid storage class for a parameter
-move.c(132):W0520085:Invalid storage class for a parameter
-move.c(132):W0520085:Invalid storage class for a parameter
-move.c(132):W0520085:Invalid storage class for a parameter
-move.c(140):W0520085:Invalid storage class for a parameter
-move.c(140):W0520085:Invalid storage class for a parameter
-move.c(140):W0520085:Invalid storage class for a parameter
-move.c(140):W0520085:Invalid storage class for a parameter
-move.c(175):W0520085:Invalid storage class for a parameter
-move.c(175):W0520085:Invalid storage class for a parameter
-move.c(175):W0520085:Invalid storage class for a parameter
-move.c(175):W0520085:Invalid storage class for a parameter
-move.c(182):W0520085:Invalid storage class for a parameter
-move.c(182):W0520085:Invalid storage class for a parameter
-move.c(182):W0520085:Invalid storage class for a parameter
-move.c(182):W0520085:Invalid storage class for a parameter
-move.c(189):W0520085:Invalid storage class for a parameter
-move.c(905):W0520177:Variable "kuri" was declared but never referenced
-move.c(1950):W0520177:Variable "j" was declared but never referenced
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe define.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\define.obj -debug -g_line -nologo
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\ccrx.exe vsc3.c -isa=rxv1 -nofpu -lang=c -include=..\CS+\CC\CC-RX\V3.03.00\include -include=..\20210829kousyuu -include=. -output=obj=DefaultBuild\vsc3.obj -debug -g_line -nologo
+define.c(18):W0520177:Variable "time_c" was declared but never referenced
+define.c(77):W0520177:Variable "time_a" was declared but never referenced
+define.c(78):W0520177:Variable "send_data" was declared but never referenced
+vsc3.c(10):W0520550:Variable "joint_R_X" was set but never used
+vsc3.c(10):W0520177:Variable "i" was declared but never referenced
+vsc3.c(10):W0520177:Variable "pn" was declared but never referenced
+vsc3.c(10):W0520177:Variable "da" was declared but never referenced
+vsc3.c(11):W0520177:Variable "theata_L" was declared but never referenced
+vsc3.c(11):W0520177:Variable "theata_R" was declared but never referenced
+vsc3.c(11):W0520177:Variable "level_R" was declared but never referenced
+vsc3.c(11):W0520177:Variable "level_L" was declared but never referenced
+vsc3.c(13):W0520177:Variable "send_data" was declared but never referenced
+vsc3.c(14):W0520177:Variable "datu_mode" was declared but never referenced
+vsc3.c(14):W0520177:Variable "bace_mode" was declared but never referenced
+vsc3.c(14):W0520177:Variable "ent_mode" was declared but never referenced
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.05.00\Bin\rlink.exe -subcommand=DefaultBuild\nisoku_robot_2nd.clnk
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 W0561017:Paid license of CC-RX V3 is not found, and the evaluation period has expired. Please consider purchasing the product.
 Renesas Optimizing Linker Completed
------- ビルド終了(エラー:0個, 警告:25個)(nisoku_robot_2nd, DefaultBuild) ------
+------ ビルド終了(エラー:0個, 警告:17個)(nisoku_robot_2nd, DefaultBuild) ------
 
 --- CommandFile 1 ---
 DefaultBuild\nisoku_robot_2nd.clnk :
@@ -70,8 +63,8 @@ DefaultBuild\nisoku_robot_2nd.clnk :
 
 
 --- SHA1 hash value of output files ---
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 214539a1cae1f7afa91e67a8e3d6b4669b2d0a89
-C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: a30010668af62934d4c88a746486be53644adafa
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.abs: 81b4334e15687955dbf144f6f8aab07fa8124179
+C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisoku_robot_2nd\DefaultBuild\nisoku_robot_2nd.mot: 17639c60179f9ae7d417b7019a43e65206c0d083
 
 
 --- システム情報 ---
@@ -101,9 +94,9 @@ C:\Users\right\OneDrive\ドキュメント\nisoku_2nd-main\nisoku_2nd-main\nisok
  *プライベート・ワーキング・セット
   135 MB
  *GDIオブジェクト数
-  1692
+  1691
  *USERオブジェクト数
-  786
+  782
  *開いているファイル
   0 editors, 0 files, 0 KB
 
