@@ -262,7 +262,7 @@ void side_L(void){
 		leftleg(20,45,-45,-35);
 	}else{
 		rightleg(5,40,-40,-20);
-		leftleg(5,10,-10,-2);
+		leftleg(5,0,-0,-5);
 		rightarm(-40,60,0);
 		leftarm(-40,60,0);
 		kosi(0);
@@ -286,8 +286,8 @@ void side_R(void){
 		leftleg(20,10,-10,-5);
 		rightleg(20,45,-45,-30);
 	}else{
-		leftleg(5,45,-45,-15);
-		rightleg(5,10,-10,-2);
+		leftleg(5,40,-40,-15);
+		rightleg(5,20,-20,0);
 		leftarm(-40,60,0);
 		rightarm(-40,60,0);
 		kosi(0);
@@ -420,14 +420,14 @@ void roll_R(void){
 	if(cnt_time>600){
 		cnt_time=0;
 	}else if(cnt_time>300){
-		leftleg(0,15,-25,-20);
-		rightleg(0,15,-25,-20);
+		leftleg(0,25,-25,-20);
+		rightleg(0,25,-25,-20);
 		kosi(-30);
 	}else{
 		leftleg(15,35,-45,-20);
 		rightleg(15,35,-45,-20);
-		leftarm(0,60,0);
-		rightarm(0,60,0);
+		leftarm(50,70,0);
+		rightarm(50,70,0);
 		kosi(0);
 	}
 }
@@ -466,14 +466,14 @@ void roll_L(void){
 		if(cnt_time>600){
 			cnt_time=0;
 		}else if(cnt_time>300){
-			rightleg(5,15,-25,-20);
-			leftleg(5,15,-25,-20);
+			rightleg(5,25,-25,-20);
+			leftleg(5,25,-25,-20);
 			kosi(30);
 		}else{
 			rightleg(15,35,-45,-20);
 			leftleg(15,35,-45,-20);
-			leftarm(0,60,0);
-			rightarm(0,60,0);
+			leftarm(50,70,0);
+			rightarm(50,70,0);
 			kosi(0);
 		}
 }
@@ -506,17 +506,17 @@ void suri_front(void){
 	leftleg_strech(30,60,60,60);
 	rightleg_strech(30,60,60,60);
 	kosi_strech(60);
-	leftarm(0,40,10);
-	rightarm(0,40,10);
+	leftarm(0,40,20);
+	rightarm(0,40,20);
 	if(cnt_time>600){
 		cnt_time=0;
 	}else if(cnt_time>300){
-		rightleg(5,40,-40,-4);
-		leftleg(5,-10,-40,-9);
+		rightleg(5,40,-40,-7);
+		leftleg(5,-10,-40,-15);
 		kosi(5);
 	}else{
-		rightleg(5,-10,-40,-9);
-		leftleg(5,42,-42,-4);
+		rightleg(5,-10,-40,-15);
+		leftleg(5,42,-42,-10);
 		kosi(-5);
 	}
 }
@@ -536,11 +536,11 @@ void suri_back(void){
 	}else if(cnt_time>300){
 		rightleg(10,40,-40,-20);
 		leftleg(10,40,0,-15);
-		kosi(-10);
+		kosi(-5);
 	}else{
 		rightleg(10,40,0,-15);
 		leftleg(10,40,-40,-20);
-		kosi(10);
+		kosi(5);
 	}
 
 }
@@ -1508,8 +1508,8 @@ void side_up_R(void){
 	}else if(cnt_time>200){
 		leftarm(30,0,0);
 		rightarm(60,60,10);
-		leftleg(5,40,-50,10);
-		rightleg(0,0,-0,-15);
+		leftleg(5,40,-50,-5);
+		rightleg(5,10,-10,-15);
 	}else{
 		leftarm(0,60,0);
 		rightarm(0,60,0);
@@ -1553,8 +1553,8 @@ void side_up_L(void){
 	}else if(cnt_time>200){
 		rightarm(30,0,0);
 		leftarm(60,50,10);
-		rightleg(5,40,-50,10);
-		leftleg(0,0,-0,-15);
+		rightleg(5,40,-50,-5);
+		leftleg(5,0,-0,-15);
 		kosi(40);
 	}else{
 		leftarm(0,60,0);
