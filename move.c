@@ -142,7 +142,7 @@ void leftleg(static int mata,static int momo,static int hiza,static int kubi){
 	//hiza=7500+hiza/270;
 	if(mata<360){
 		mata*=-1;
-		mata+=4;
+		mata-=4;
 		set_angle(9,mata);
 	}else{
 		servo_free(9);
@@ -188,7 +188,7 @@ void leftleg_speed(static int mata,static int momo,static int hiza,static int ku
 
 void kosi(static int kosi){
 	if(kosi<360){
-		kosi-=4;
+		kosi-=10;
 		set_angle(14,kosi);
 	}else{
 		servo_free(14);
@@ -1347,12 +1347,12 @@ void punch_L(void){
 		rightleg(20,40,-45,-30);
 		leftleg(20,40,-45,-30);
 	}else if(cnt_time >1000){
-		leftarm(0,-50,40);
+		leftarm(-80,-60,40);
 		kosi(50);
 		rightleg(20,40,-45,-30);
 		leftleg(20,40,-45,-30);
 	}else if(cnt_time>500){
-		leftarm(100,40,50);
+		leftarm(70,60,50);
 		kosi(40);
 		rightarm(0,60,0);
 		rightleg(20,40,-45,-30);
@@ -1381,7 +1381,7 @@ void punch_R(void){
 		rightleg(15,40,-45,-25);
 		leftleg(15,40,-45,-25);
 	}else if(cnt_time >1500){
-		rightarm(-80,-30,50);
+		rightarm(-80,-60,50);
 		rightleg(20,40,-45,-30);
 		leftleg(20,40,-45,-30);
 	}else if(cnt_time >1000){
@@ -1390,7 +1390,7 @@ void punch_R(void){
 		rightleg(20,40,-45,-30);
 		leftleg(20,40,-45,-30);
 	}else if(cnt_time>500){
-		rightarm(100,40,50);
+		rightarm(80,60,50);
 		kosi(-40);
 		leftarm(0,60,0);
 		rightleg(20,40,-45,-30);
@@ -1484,37 +1484,49 @@ void side_up_R(void){
 	leftleg_strech(60,60,60,60);
 	rightleg_strech(60,60,60,60);
 	kosi_strech(60);
-	kosi(-50);
+	
 	if(cnt_time>2700){
 		leftarm(-30,50,-10);
 		rightarm(-40,-80,10);
 		leftleg(40,-50,-90,-55);
-		rightleg(40,90,50,-45);	
+		rightleg(40,90,50,-45);
+		kosi(-50);	
 	}else if(cnt_time>1700){
 		leftarm(-20,50,-10);
 		rightarm(0,40,10);
 		leftleg(40,-50,-90,-45);
 		rightleg(40,90,50,-45);
+		kosi(-50);
 	}else if(cnt_time>1000){
 		leftarm(-20,50,-10);
 		rightarm(10,50,10);
 		leftleg(10,-30,-50,3);
 		rightleg(40,90,-0,-15);
+		kosi(-50);
 	}else if(cnt_time>600){
-		leftarm(-20,50,-10);
-		rightarm(10,50,10);
+		leftarm(-20,50,-20);
+		rightarm(10,50,20);
 		leftleg(10,-30,-50,10);
 		rightleg(8,90,-0,-15);
-	}else if(cnt_time>200){
-		leftarm(30,0,0);
+		kosi(-50);
+	}else if(cnt_time>400){
+		leftarm(30,00,0);
 		rightarm(60,60,10);
-		leftleg(5,40,-50,-5);
-		rightleg(5,10,-10,-15);
+		leftleg(5,50,-30,-5);
+		rightleg(5,10,-10,-30);
+		kosi(-50);
+	}else if(cnt_time>200){
+		leftarm(60,60,0);
+		rightarm(60,60,10);
+		leftleg(5,50,-30,-5);
+		rightleg(5,10,-10,-30);
+		kosi(-50);
 	}else{
 		leftarm(0,60,0);
 		rightarm(0,60,0);
 		leftleg(15,35,-50,-25);
 		rightleg(15,35,-50,-25);
+		kosi(0);
 	}
 }
 
@@ -1796,8 +1808,8 @@ void sizers(void){
 	leftarm_speed(127,127,127);
 	leftarm_strech(60,60,60);
 	rightarm_strech(60,60,60);
-	leftleg_strech(60,60,60,60);
-	rightleg_strech(60,60,60,60);
+	leftleg_strech(30,60,60,60);
+	rightleg_strech(30,60,60,60);
 	kosi_strech(60);
 	
 	if(cnt_time>7000){

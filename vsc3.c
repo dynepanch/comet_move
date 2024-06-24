@@ -203,7 +203,7 @@ void CNTR_PUTS(void){
 					cnt_time=0;
 					first=1;
 				}
-				if(first!=2){
+				if(first!=2 && demo_mode==0){
 					side_up_R();
 				}
 			break;
@@ -213,7 +213,7 @@ void CNTR_PUTS(void){
 					cnt_time=0;
 					first=1;
 				}
-				if(first!=2){
+				if(first!=2 && demo_mode==0){
 					side_up_L();
 				}
 			break;
@@ -736,7 +736,7 @@ void CNTR_PUTS(void){
 					first=1;
 					cnt_time=0;
 				}
-				sizers();
+				if(demo_mode==0)sizers();
 			break;
 			
 			case C_START & C_DOWN:
@@ -871,7 +871,7 @@ void CNTR_PUTS(void){
 					flont_osidasi();
 				}else if(joint_R_Y>=0xff && AL_mode==1){
 					back_osidasi();
-				}else if(syagaowari==1){
+				}else if(syagaowari==1  && demo_mode==0){
 					if(cnt_time>1000){
 						syagaowari=0;
 					}else{
