@@ -79,6 +79,16 @@
       <DebugConsole-EnableDisable>enable</DebugConsole-EnableDisable>
     </Instance>
   </Class>
+  <Class Guid="2e5a2d99-73c8-434e-963e-228cb95ebec4">
+    <Instance Guid="00000000-0000-0000-0000-000000000000">
+      <Current.DocListVersion>1</Current.DocListVersion>
+      <Current.UpdateDate>638570781228111205</Current.UpdateDate>
+      <Current.DocList.UM.Count>0</Current.DocList.UM.Count>
+      <Current.DocList.TU.Count>0</Current.DocList.TU.Count>
+      <Current.DocList.AN.Count>0</Current.DocList.AN.Count>
+      <Current.DocList.TN.Count>0</Current.DocList.TN.Count>
+    </Instance>
+  </Class>
   <Class Guid="ce51aa0d-1353-40fe-ba85-46c1106c7c21">
     <Instance Guid="00000000-0000-0000-0000-000000000000">
       <IsSymbolOffsetVisible>False</IsSymbolOffsetVisible>
