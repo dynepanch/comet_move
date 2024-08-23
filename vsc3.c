@@ -218,7 +218,7 @@ void CNTR_PUTS(void){
 				}
 			break;
 			
-			//�~
+			
 			case C_PEC:
 				syaga=0;
 				if(first==0){
